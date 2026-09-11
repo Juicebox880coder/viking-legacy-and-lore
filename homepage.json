@@ -1,0 +1,44 @@
+{
+  "verified": "2026-09-11",
+  "source": "https://feeds.buzzsprout.com/2459523.rss",
+  "start": [
+    {
+      "category": "Norse mythology",
+      "title": "Hrungnir: The Giant Who Almost Killed Thor",
+      "hook": "Meet the stone-hearted giant who challenged the thunder god.",
+      "url": "https://open.spotify.com/episode/3UT7tSi7HzIQ4EeM6skmf8"
+    },
+    {
+      "category": "Viking society",
+      "title": "10 Things Vikings Did Better Than the Rest of the World",
+      "hook": "Shipbuilding, trade, law and exploration: discover the ingenuity behind the Viking Age.",
+      "url": "https://open.spotify.com/episode/2HXOXq7XWjtt3tkrwlsC6S"
+    },
+    {
+      "category": "Warfare & strategy",
+      "title": "The Currency of Fear: The Viking Raid on Tours",
+      "hook": "Follow a raid far inland, where silver became the price of peace.",
+      "url": "https://open.spotify.com/episode/50E9x9Dzz8MIwl0QUvqKST"
+    }
+  ],
+  "episodes": [
+    {
+      "category": "Exploration · June 29, 2026",
+      "title": "Eric the Red: An Exiles path to Greatness",
+      "hook": "From exile to Greenland: follow the ambition and voyages of Erik the Red.",
+      "url": "https://www.youtube.com/watch?v=wPQ5ik7NeAs"
+    },
+    {
+      "category": "History · June 22, 2026",
+      "title": "20 Viking Age Facts That Will Blow Your Mind",
+      "hook": "Farmers, traders, explorers and innovators. Revisit familiar ideas about the Vikings.",
+      "url": "https://www.youtube.com/watch?v=y9py6DBTjM8"
+    },
+    {
+      "category": "Daily life · June 15, 2026",
+      "title": "Viking Diet: The Menu that Fueled the North",
+      "hook": "Step inside the Viking household to explore food, preservation and survival.",
+      "url": "https://www.youtube.com/watch?v=f5UOGlklU6I"
+    }
+  ]
+}
