@@ -1,0 +1,44 @@
+{
+  "slug": "about",
+  "title": "About",
+  "heading": "History with a human heartbeat.",
+  "schema_type": "AboutPage",
+  "description": "Meet Viking Legacy & Lore, hosted by T.R. Pomeroy: narrative history, Norse mythology, archaeology and the stories behind the Viking world.",
+  "intro": "Viking Legacy & Lore follows the people behind the legends: their voyages and ambitions, their beliefs and laws, and the stories they left behind.",
+  "sections": [
+    {
+      "heading": "The voice behind the stories",
+      "paragraphs": [
+        "Hosted by T.R. Pomeroy, the podcast and YouTube channel explore Viking history, archaeology, Norse mythology and the sagas. Each episode offers another way into the Norse world, from everyday ingenuity to the stories that still stir the imagination."
+      ]
+    },
+    {
+      "heading": "History, lore and imagination",
+      "paragraphs": [
+        "Historical evidence, myth and saga offer different kinds of insight. Our aim is to make those distinctions clear while keeping the human story in view. Original Tora stories sit in their own episode category, alongside the history and mythology archive."
+      ]
+    },
+    {
+      "heading": "A publication taking shape",
+      "paragraphs": [
+        "The listening room is open. Articles and a Norse Library are the next chapters: places for considered writing, useful reading and encounters with the surviving traces of the past."
+      ]
+    },
+    {
+      "heading": "Keep the conversation going",
+      "paragraphs": [
+        "Have a question, a source to recommend or a correction to an episode? Include the episode title and the passage or timestamp so we can follow your reference."
+      ]
+    }
+  ],
+  "links": [
+    {
+      "label": "Browse the episode archive",
+      "url": "/episodes/"
+    },
+    {
+      "label": "Contact the show",
+      "url": "/contact/"
+    }
+  ]
+}

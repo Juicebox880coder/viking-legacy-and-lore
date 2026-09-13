@@ -1,0 +1,44 @@
+{
+  "slug": "contribute",
+  "title": "Contribute",
+  "heading": "Bring a story to the table.",
+  "schema_type": "WebPage",
+  "description": "Suggest a story, source or future article for Viking Legacy & Lore. Learn what to include in a pitch and how to contact the publication.",
+  "intro": "Have a Viking-world story worth exploring? Send a short idea by email. We are gathering suggestions for the podcast and the future written publication.",
+  "sections": [
+    {
+      "heading": "Start with a short pitch",
+      "paragraphs": [
+        "Tell us the central question, why the story interests you, and what a listener or reader would take away. A paragraph or two is enough to begin."
+      ]
+    },
+    {
+      "heading": "Give us a trail to follow",
+      "paragraphs": [
+        "Include the sources you would use, with links or publication details. If the idea involves an image, translation or quotation, identify its creator and where it was published."
+      ]
+    },
+    {
+      "heading": "Tell us about your perspective",
+      "paragraphs": [
+        "Add a short introduction and any relevant experience or previous work you would like to share. Ideas from curious readers are welcome alongside proposals from writers and researchers."
+      ]
+    },
+    {
+      "heading": "What happens next",
+      "paragraphs": [
+        "Email is the current route for ideas; there is no contributor account or upload portal. Sending a pitch does not guarantee a response or publication. Scope, credit, permissions and any payment would need to be discussed before commissioned work begins."
+      ]
+    }
+  ],
+  "links": [
+    {
+      "label": "Email a story idea",
+      "url": "mailto:vikinglegacyandlore@gmail.com?subject=Story%20idea%20for%20Viking%20Legacy%20%26%20Lore"
+    },
+    {
+      "label": "Read about the publication",
+      "url": "/about/"
+    }
+  ]
+}

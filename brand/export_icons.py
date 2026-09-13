@@ -27,7 +27,7 @@ def icon(size):
     return canvas
 for size in (16,32,180,192,512):icon(size).convert('RGB').save(out/f'icon-{size}.png',optimize=True)
 icon(256).save(ROOT/'public/favicon.ico',sizes=[(16,16),(32,32),(48,48)])
-encoded=base64.b64encode((out/'logo-ivory.png').read_bytes()).decode()
+encoded=base64.b64encode((out/'logo-ivory-small.png').read_bytes()).decode()
 w,h=mark.size;ih=92;iw=ih*w/h
 (ROOT/'public/favicon.svg').write_text(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" rx="14" fill="#1C1B19"/><image x="{(100-iw)/2:.3f}" y="4" width="{iw:.3f}" height="92" href="data:image/png;base64,{encoded}"/></svg>\n')
 print('Exported the original silhouette in flat gold/ivory and square icon sizes.')

@@ -1,5 +1,6 @@
 """Offline publishing checks: run python3 -m unittest -v test_site.py."""
-import unittest,json,tempfile,shutil
+import unittest,json,tempfile,shutil,re
+import xml.etree.ElementTree as ET
 from pathlib import Path
 from html.parser import HTMLParser
 from urllib.parse import urlsplit,unquote
@@ -50,4 +51,32 @@ class SiteTests(unittest.TestCase):
     def test_plain_text_is_escaped(self):
         e=build.load_episodes()[0].copy();e['title']='<script>alert(1)</script>'
         self.assertNotIn('<script>',build.card(e));self.assertIn('&lt;script&gt;',build.card(e))
+    def test_metadata_and_sitemap_cover_every_public_page(self):
+        canonicals=set();titles=set()
+        for file in build.PUBLIC.rglob('*.html'):
+            content=file.read_text()
+            if file.name=='404.html':
+                self.assertIn('name="robots" content="noindex"',content);continue
+            canonical=re.search(r'<link rel="canonical" href="([^"]+)"',content).group(1)
+            self.assertNotIn(canonical,canonicals);canonicals.add(canonical)
+            title=re.search(r'<title>(.*?)</title>',content).group(1)
+            self.assertNotIn(title,titles);titles.add(title)
+            schemas=[json.loads(s) for s in re.findall(r'<script type="application/ld\+json">(.*?)</script>',content,re.S)]
+            self.assertTrue(schemas,str(file))
+            self.assertTrue(any('@graph' in s for s in schemas),str(file))
+            if '/episodes/' in canonical and not canonical.endswith('/episodes/'):
+                episode=next(s for s in schemas if s.get('@type')=='PodcastEpisode')
+                self.assertEqual(episode['url'],canonical)
+                self.assertRegex(episode['duration'],r'^PT\d+S$')
+        xml=ET.parse(build.PUBLIC/'sitemap.xml')
+        urls={e.text for e in xml.findall('.//{*}loc')}
+        self.assertEqual(canonicals,urls)
+    def test_media_does_not_connect_until_requested(self):
+        for file in build.PUBLIC.rglob('*.html'):
+            content=file.read_text()
+            self.assertNotIn('<iframe',content,str(file))
+            self.assertEqual(content.count('src="/episodes.js"'),1,str(file))
+            if '<audio' in content:
+                self.assertIn('preload="none"',content)
+                self.assertIn('Listen on the podcast host',content)
 if __name__=='__main__':unittest.main()

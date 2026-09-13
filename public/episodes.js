@@ -27,6 +27,7 @@ for (const button of document.querySelectorAll('[data-embed]')) {
   button.addEventListener('click', () => {
     const frame = document.createElement('iframe');
     frame.src = button.dataset.embed;
+    siteEvent('load_player', frame.src.includes('spotify.com') ? 'spotify' : 'youtube');
     frame.title = button.dataset.title;
     frame.height = button.dataset.height;
     frame.allow = 'encrypted-media; fullscreen; picture-in-picture';
@@ -35,4 +36,34 @@ for (const button of document.querySelectorAll('[data-embed]')) {
     button.replaceWith(frame);
     frame.focus();
   });
+}
+
+/* Local semantic events: no storage, network transport, email addresses or search terms.
+   Cloudflare Web Analytics measures visits/performance separately. */
+function siteEvent(action, destination) {
+  document.dispatchEvent(new CustomEvent('viking:interaction', {
+    detail: { action, destination }
+  }));
+}
+document.addEventListener('click', event => {
+  const link = event.target.closest('a');
+  if (!link) return;
+  const url = new URL(link.href, location.href);
+  if (url.protocol === 'mailto:') siteEvent('contact', 'email');
+  else if (url.hostname === 'open.spotify.com') siteEvent('outbound', 'spotify');
+  else if (url.hostname === 'www.youtube.com') siteEvent('outbound', 'youtube');
+  else if (url.hostname === 'www.instagram.com') siteEvent('outbound', 'instagram');
+});
+for (const audio of document.querySelectorAll('audio')) {
+  audio.addEventListener('playing', () => siteEvent('audio_play', 'podcast'), { once: true });
+  const showError = () => {
+    if (audio.parentElement.querySelector('.media-error')) return;
+    const message = document.createElement('p');
+    message.className = 'media-error';
+    message.setAttribute('role', 'status');
+    message.textContent = 'The audio could not be loaded here. Try the audio-file or podcast-host link below.';
+    audio.after(message);
+  };
+  audio.addEventListener('error', showError);
+  audio.querySelector('source')?.addEventListener('error', showError);
 }

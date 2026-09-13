@@ -1,0 +1,58 @@
+{
+  "slug": "privacy",
+  "title": "Privacy & external services",
+  "heading": "A clear view of what connects.",
+  "schema_type": "WebPage",
+  "description": "How Viking Legacy & Lore uses Cloudflare Web Analytics, external media players and email contact links.",
+  "intro": "The site is designed to let you browse its pages without an account and choose when to load external media.",
+  "sections": [
+    {
+      "heading": "Site analytics",
+      "paragraphs": [
+        "Cloudflare Web Analytics is enabled to measure visits and page performance. The current configuration excludes visitors in the EU. Cloudflare describes this service as privacy-first analytics without collecting or using visitors’ personal data. Browser settings and blockers may prevent the analytics script from loading."
+      ]
+    },
+    {
+      "heading": "Listening and watching",
+      "paragraphs": [
+        "Spotify and YouTube embedded players load only when you select their buttons. Playing audio connects to the podcast host. Those services may receive technical information and apply their own privacy policies. Direct links also take you to external services."
+      ]
+    },
+    {
+      "heading": "Email contact",
+      "paragraphs": [
+        "Contact links open your email application. There is no website contact form or contributor upload system. Information you choose to email is sent through your email provider to the show’s email account."
+      ]
+    },
+    {
+      "heading": "Interaction events",
+      "paragraphs": [
+        "The site prepares local browser events for player loads, audio starts and selected outgoing links. These events do not include search terms, message contents or email addresses and are not sent to an additional analytics service."
+      ]
+    },
+    {
+      "heading": "Questions",
+      "paragraphs": [
+        "For a question about the site or a message you have sent, contact vikinglegacyandlore@gmail.com."
+      ]
+    }
+  ],
+  "links": [
+    {
+      "label": "Cloudflare Web Analytics explained",
+      "url": "https://developers.cloudflare.com/web-analytics/about/"
+    },
+    {
+      "label": "Spotify privacy policy",
+      "url": "https://www.spotify.com/legal/privacy-policy/"
+    },
+    {
+      "label": "Google privacy policy",
+      "url": "https://policies.google.com/privacy"
+    },
+    {
+      "label": "Contact the show",
+      "url": "/contact/"
+    }
+  ]
+}

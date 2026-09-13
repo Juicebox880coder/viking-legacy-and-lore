@@ -1,4 +1,9 @@
 [
+  "404.html",
+  "about/index.html",
+  "articles/index.html",
+  "contact/index.html",
+  "contribute/index.html",
   "episodes/16833140-viking-legacy-and-lore-official-trailer/index.html",
   "episodes/17054359-the-saga-vikings-feared-most/index.html",
   "episodes/17054376-valkyries-the-fearsome-weavers-of-viking-fate/index.html",
@@ -52,5 +57,7 @@
   "episodes/19349186-eric-the-red-an-exiles-path-to-greatness/index.html",
   "episodes/19440990-hervor-the-viking-shield-maiden-and-the-cursed-blade/index.html",
   "episodes/index.html",
-  "index.html"
+  "index.html",
+  "library/index.html",
+  "privacy/index.html"
 ]

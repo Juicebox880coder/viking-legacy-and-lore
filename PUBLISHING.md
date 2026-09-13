@@ -48,3 +48,9 @@ When posting a correction, edit the JSON and repeat the same workflow. Do not mo
 Automated: page creation, archive order, topic filters, latest/recent homepage selections, optional media players, related-episode fallback, metadata and sitemap.
 
 Editorial: accurate summaries, episode-to-video matching, Spotify IDs, source citations and topic categorization. The initial import contains 52 feed entries including two trailers, with 7 verified Spotify IDs and 15 verified YouTube IDs. Every entry has direct podcast audio. Missing platform IDs produce no empty or misleading embeds.
+
+## Supporting pages
+
+Edit `content/pages/about.json`, `articles.json`, `library.json`, `contribute.json`, `contact.json` or `privacy.json`. Fields contain plain text; the builder escapes it. Links must use a site path, HTTPS URL or the configured contact email. Keep collection previews accurate until the later publishing stages are actually implemented. Build and run the tests before pushing.
+
+For a correction, update the affected episode JSON and rebuild. Do not edit generated HTML directly. Avoid adding unverified source claims, bibliographies, dates or host credentials to the supporting pages.

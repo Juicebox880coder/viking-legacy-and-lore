@@ -1,0 +1,47 @@
+{
+  "slug": "contact",
+  "title": "Contact",
+  "heading": "The conversation continues.",
+  "schema_type": "ContactPage",
+  "description": "Contact Viking Legacy & Lore with episode ideas, corrections, resource suggestions or collaboration enquiries at vikinglegacyandlore@gmail.com.",
+  "intro": "Questions, episode ideas, reading recommendations and thoughtful corrections are welcome.",
+  "sections": [
+    {
+      "heading": "Write to the show",
+      "paragraphs": [
+        "vikinglegacyandlore@gmail.com",
+        "The email link below opens your email application. You can also copy the address into your preferred email service."
+      ]
+    },
+    {
+      "heading": "Make your message easy to follow",
+      "paragraphs": [
+        "For an episode question or correction, include the title, relevant timestamp or passage, and a supporting source where possible. For a resource suggestion, include the title, author or institution and a link."
+      ]
+    },
+    {
+      "heading": "Ideas for the written publication",
+      "paragraphs": [
+        "Planning to suggest a future article? The Contribute page explains what to include in a short pitch."
+      ]
+    }
+  ],
+  "links": [
+    {
+      "label": "Email Viking Legacy & Lore",
+      "url": "mailto:vikinglegacyandlore@gmail.com"
+    },
+    {
+      "label": "Read contribution guidance",
+      "url": "/contribute/"
+    },
+    {
+      "label": "Instagram",
+      "url": "https://www.instagram.com/vikinglegacyandlore/"
+    },
+    {
+      "label": "TikTok",
+      "url": "https://www.tiktok.com/@viking.legacyandlore"
+    }
+  ]
+}

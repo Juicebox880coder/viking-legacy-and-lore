@@ -1,0 +1,44 @@
+{
+  "slug": "library",
+  "title": "Norse Library",
+  "heading": "A reading room for the curious.",
+  "schema_type": "CollectionPage",
+  "description": "Explore the plans for the Norse Library: books, museums, archaeology, sagas and Eddas, with a focus on useful context and traceable sources.",
+  "intro": "The Norse Library is being prepared as a guide to books, collections and sources. It is not yet a searchable catalogue or a collection of full texts.",
+  "sections": [
+    {
+      "heading": "Books & scholarship",
+      "paragraphs": [
+        "The planned reading guides will give each work context: who wrote it, what it covers and where a reader might begin."
+      ]
+    },
+    {
+      "heading": "Museums & archaeology",
+      "paragraphs": [
+        "A future collection of museum resources and archaeological discoveries will connect readers with the institutions and publications behind them."
+      ]
+    },
+    {
+      "heading": "Sagas & Eddas",
+      "paragraphs": [
+        "Future guides will identify texts, editions and translators so readers can understand which version they are reading. Full-text readers and translations are planned for a later stage."
+      ]
+    },
+    {
+      "heading": "Help shape the shelves",
+      "paragraphs": [
+        "Recommend a book, a museum collection or a source through the contact page. Include its title, author or institution, and a link where available."
+      ]
+    }
+  ],
+  "links": [
+    {
+      "label": "Recommend a resource",
+      "url": "/contact/"
+    },
+    {
+      "label": "Visit the listening room",
+      "url": "/episodes/"
+    }
+  ]
+}
