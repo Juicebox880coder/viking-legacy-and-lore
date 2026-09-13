@@ -58,6 +58,14 @@ class SiteTests(unittest.TestCase):
             path.write_text(original)
             path=root/'content/research/resources.json';data=json.loads(path.read_text());data[0]['url']='javascript:alert(1)';path.write_text(json.dumps(data))
             with self.assertRaisesRegex(ValueError,'HTTPS'):research.load(root,build.load_episodes())
+    def test_articles_have_citations_and_article_metadata(self):
+        for file in (build.PUBLIC/'articles').glob('*/index.html'):
+            content=file.read_text()
+            schema=next(json.loads(x) for x in re.findall(r'<script type="application/ld\+json">(.*?)</script>',content,re.S) if json.loads(x).get('@type')=='Article')
+            self.assertIn('datePublished',schema);self.assertIn('author',schema)
+            self.assertIn('Sources &amp; further reading',content)
+            self.assertIn('href="#source-',content)
+            self.assertIn('href="/start/"',content)
     def test_plain_text_is_escaped(self):
         e=build.load_episodes()[0].copy();e['title']='<script>alert(1)</script>'
         self.assertNotIn('<script>',build.card(e));self.assertIn('&lt;script&gt;',build.card(e))
