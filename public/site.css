@@ -260,3 +260,24 @@ audio { width:100%;margin:18px 0 0; }
 .archive-grid h2 a { color:inherit;text-decoration:none; }
 .archive-grid h2 a:hover { color:#d9bd84;text-decoration:underline; }
 button.button-secondary { background:transparent; }
+/* Supplied publisher's emblem: flat antique gold, original silhouette. */
+:root { --brand-gold:#9A8357; --brand-ivory:#E8E1D3; --brand-charcoal:#1C1B19; }
+.brand-lockup { display:inline-flex;align-items:center;gap:17px;flex-shrink:0; }
+.brand-lockup>span { white-space:nowrap; }
+.brand-amp { color:var(--brand-gold); }
+.nav-emblem { display:block;width:auto;height:42px;flex-shrink:0;object-fit:contain; }
+.hero { position:relative;isolation:isolate; }
+.hero-emblem { position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);height:clamp(340px,42vw,520px);width:auto;max-width:none;opacity:.045;z-index:-1;pointer-events:none;object-fit:contain; }
+.emblem-divider { display:flex;align-items:center;justify-content:center;gap:24px;max-width:360px;margin:0 auto 46px; }
+.emblem-divider::before,.emblem-divider::after { content:"";height:1px;flex:1;background:var(--brand-gold);opacity:.3; }
+.emblem-divider img { height:56px;width:auto;display:block; }
+.emblem-divider + .coming { border-top:0;padding-top:0; }
+.related-ornament { margin-bottom:38px; }
+.related-ornament img { height:52px; }
+.footer-brand { gap:22px;color:var(--brand-ivory); }
+.footer-brand>span { font-family:Georgia,"Times New Roman",serif;text-transform:uppercase;letter-spacing:1.5px;font-size:.92rem; }
+.footer-emblem { height:76px;width:auto;display:block; }
+.footer-top { flex-wrap:wrap;row-gap:24px; }
+@media(max-width:800px) { .site-nav { gap:18px; } .nav-links { gap:20px; } .brand-lockup { gap:13px; } .site-nav .wordmark { font-size:1.05rem; } }
+@media(max-width:600px) { .site-nav { padding-top:18px;padding-bottom:16px;gap:13px; } .nav-emblem { height:36px; } .hero-emblem { height:420px;opacity:.04; } .footer-emblem { height:68px; } .footer-brand { gap:18px; } .footer-brand>span { font-size:.78rem;letter-spacing:1px; } }
+@media(max-width:360px) { .site-nav .wordmark { font-size:1rem; } .brand-lockup { gap:12px; } }
