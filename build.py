@@ -2,6 +2,7 @@
 from pathlib import Path
 from datetime import datetime
 import html, json, re
+import research
 from urllib.parse import urlparse
 ROOT=Path(__file__).resolve().parent
 PUBLIC=ROOT/'public'
@@ -71,6 +72,7 @@ def supporting_pages(template):
     pages={}
     for file in sorted((ROOT/'content/pages').glob('*.json')):
         p=json.loads(file.read_text());slug=p['slug']
+        if slug=='library':continue  # Replaced by the curated research catalogue.
         if not re.fullmatch(r'[a-z]+',slug) or slug in ('episodes','index'):raise ValueError('Unsafe supporting page slug')
         body=f'<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a> / {esc(p["title"])}</nav><section class="support-heading"><div class="eyebrow">{esc(p["title"])}</div><h1 class="page-title">{esc(p["heading"])}</h1><p class="section-intro">{esc(p["intro"])}</p></section><div class="editorial-sections">'
         for section in p['sections']:
@@ -92,6 +94,8 @@ def enrich_page(content,url):
         title=html.unescape(re.search(r'<title>(.*?)</title>',content).group(1)).split(' | ')[0]
         crumbs=[{'@type':'ListItem','position':1,'name':'Home','item':SITE+'/'}]
         if url.startswith('/episodes/') and url!='/episodes/':crumbs.append({'@type':'ListItem','position':2,'name':'Episodes','item':SITE+'/episodes/'})
+        for prefix,label in (('/library/','Library'),('/archaeology/','Archaeology')):
+            if url.startswith(prefix) and url!=prefix:crumbs.append({'@type':'ListItem','position':2,'name':label,'item':SITE+prefix})
         crumbs.append({'@type':'ListItem','position':len(crumbs)+1,'name':title,'item':canonical})
         graph.append({'@type':'BreadcrumbList','itemListElement':crumbs})
     data=json.dumps({'@context':'https://schema.org','@graph':graph},ensure_ascii=False).replace('<','\\u003c')
@@ -107,6 +111,7 @@ def player(e,kind):
 def build():
     episodes=load_episodes()
     if not episodes:raise ValueError('No published episodes')
+    research_data=research.load(ROOT,episodes)
     template=(ROOT/'homepage.template.html').read_text();home=template.replace('{{LATEST}}',latest(episodes[0]))
     original=json.loads((ROOT/'homepage.json').read_text())
     for key in ('start','episodes'):
@@ -135,8 +140,10 @@ def build():
         preferred=e.get('related_ids',[])
         related=sorted((x for x in episodes if x['id']!=e['id']),key=lambda x:(preferred.index(x['id']) if x['id'] in preferred else len(preferred),0 if x['category']==e['category'] else 1))[:3]
         body=f'<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/episodes/">Episodes</a></nav><section class="episode-heading"><div class="eyebrow">{esc(e["category"])}</div><h1 class="page-title">{esc(e["title"])}</h1><p class="meta"><time datetime="{esc(e["published"])}">{date(e)}</time> · {duration(e)} · {"Trailer" if e.get("type")=="trailer" else "Podcast"}</p><p class="section-intro">{esc(e["summary"])}</p></section><div class="episode-layout"><div>{media}<section id="notes"><h2>About this episode</h2><div class="show-notes">{notes}</div></section><section class="source-note"><h2>Episode notes &amp; reading</h2><p>These are the show’s published episode notes. <a href="{esc(e["publication_url"])}">View the original episode on Buzzsprout</a>.</p>{reading}</section></div><aside class="episode-aside"><img src="{esc(e["image"])}" width="300" height="300" alt="Viking Legacy and Lore podcast artwork" loading="lazy"><p class="eyebrow">Keep exploring</p><p>Stories of the Viking world, wherever you listen.</p><a class="text-link" href="/episodes/">Browse all episodes →</a><a class="text-link" href="https://open.spotify.com/show/7ocooMGKkr9oTVeggU237S">Follow the show on Spotify ↗</a></aside></div><section><div class="emblem-divider related-ornament" aria-hidden="true"><img src="/brand/logo-gold-small.png" width="28" height="52" alt="" loading="lazy"></div><div class="eyebrow">Continue your journey</div><h2>More to explore</h2><div class="grid">'+''.join(card(x) for x in related)+'</div></section>'
+        body=body.replace('</div><aside class="episode-aside">',research.related(e['id'],research_data[0])+'</div><aside class="episode-aside">')
         schema={'@context':'https://schema.org','@type':'PodcastEpisode','name':e['title'],'url':SITE+path(e),'datePublished':e['published'],'description':e['summary'],'duration':f'PT{e["duration"]}S','image':SITE+e['image'] if e['image'].startswith('/') else e['image'],'partOfSeries':{'@id':SITE+'/#podcast'},'associatedMedia':{'@type':'AudioObject','contentUrl':e['audio_url'],'encodingFormat':'audio/mpeg'}}
         generated[path(e).lstrip('/')+'index.html']=page_shell(template,e['title'],e['summary'][:160],path(e),body,e['image'],schema)
+    generated.update(research.generate(ROOT,template,episodes,page_shell,card,path,research_data))
     for name in generated:
         generated[name]=enrich_page(generated[name],'/'+name.removesuffix('index.html'))
     error=page_shell(template,'Page not found','Find your way back to the Viking Legacy & Lore homepage or episode archive.','/404.html','<section><div class="eyebrow">404 · Page not found</div><h1 class="page-title">This path has yet to be charted.</h1><p class="section-intro">The page you’re looking for could not be found. Choose a path below to continue exploring.</p><div class="support-actions buttons"><a class="button button-primary" href="/">Return home</a><a class="button button-secondary" href="/episodes/">Find an episode</a></div></section>')
@@ -147,7 +154,7 @@ def build():
     previous=json.loads(manifest.read_text()) if manifest.exists() else []
     for old in set(previous)-set(generated):
         candidate=(PUBLIC/old).resolve()
-        if candidate.is_relative_to(PUBLIC.resolve()) and re.fullmatch(r'(?:episodes/[a-z0-9-]+|[a-z]+)/index\.html',old):candidate.unlink(missing_ok=True)
+        if candidate.is_relative_to(PUBLIC.resolve()) and re.fullmatch(r'(?:episodes/[a-z0-9-]+|archaeology/[a-z0-9-]+|library/paths/[a-z0-9-]+|library/editorial|[a-z]+)/index\.html',old):candidate.unlink(missing_ok=True)
     for name,content in generated.items():
         target=PUBLIC/name;target.parent.mkdir(parents=True,exist_ok=True);target.write_text(content)
     manifest.write_text(json.dumps(sorted(generated),indent=2)+'\n')

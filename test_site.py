@@ -43,11 +43,21 @@ class SiteTests(unittest.TestCase):
             root=Path(folder)
             for name in ('content','public'):shutil.copytree(original/name,root/name)
             for name in ('homepage.json','homepage.template.html','.generated-pages.json'):shutil.copy(original/name,root/name)
-            p=root/'content/episodes/16833140.json';e=json.loads(p.read_text());e['draft']=True;p.write_text(json.dumps(e));build.ROOT=root;build.PUBLIC=root/'public'
+            p=root/'content/episodes/17269686.json';e=json.loads(p.read_text());e['draft']=True;p.write_text(json.dumps(e));build.ROOT=root;build.PUBLIC=root/'public'
             try:
                 build.build();self.assertFalse((build.PUBLIC/build.path(e).lstrip('/')/'index.html').exists())
                 self.assertNotIn(build.path(e),(build.PUBLIC/'sitemap.xml').read_text())
             finally:build.ROOT=original;build.PUBLIC=public
+    def test_research_rejects_missing_citations_and_unsafe_links(self):
+        import research
+        with tempfile.TemporaryDirectory() as folder:
+            root=Path(folder);shutil.copytree(build.ROOT/'content',root/'content')
+            path=root/'content/research/discoveries.json';original=path.read_text()
+            data=json.loads(original);data[0]['sections'][0]['sources']=['missing-source'];path.write_text(json.dumps(data))
+            with self.assertRaisesRegex(ValueError,'citation'):research.load(root,build.load_episodes())
+            path.write_text(original)
+            path=root/'content/research/resources.json';data=json.loads(path.read_text());data[0]['url']='javascript:alert(1)';path.write_text(json.dumps(data))
+            with self.assertRaisesRegex(ValueError,'HTTPS'):research.load(root,build.load_episodes())
     def test_plain_text_is_escaped(self):
         e=build.load_episodes()[0].copy();e['title']='<script>alert(1)</script>'
         self.assertNotIn('<script>',build.card(e));self.assertIn('&lt;script&gt;',build.card(e))

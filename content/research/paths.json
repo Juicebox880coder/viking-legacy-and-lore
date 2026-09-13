@@ -1,0 +1,140 @@
+[
+  {
+    "id": "first-steps",
+    "title": "Begin with the Viking world",
+    "intro": "Build a broad foundation before choosing a specialist question.",
+    "resources": [
+      "viking-world",
+      "england",
+      "slavery",
+      "ash-elm"
+    ],
+    "steps": [
+      "Start with the museum’s overview and explore an object that interests you.",
+      "Compare the regional story in England with the broader museum view.",
+      "Bring unfree people into the picture when thinking about wealth and expansion.",
+      "Take up a book-length synthesis and use its references to pursue a question."
+    ],
+    "question": "Whose lives are easiest to see in the surviving evidence—and whose are harder to recover?",
+    "episode_ids": [
+      "Buzzsprout-18842527"
+    ]
+  },
+  {
+    "id": "gods-and-myths",
+    "title": "Read the gods through their sources",
+    "intro": "Move from an introduction to the poems and prose behind familiar stories.",
+    "resources": [
+      "myth-sources",
+      "poetic-edda",
+      "prose-edda",
+      "elder-edda"
+    ],
+    "steps": [
+      "Learn what kinds of sources survive before reading a modern retelling.",
+      "Choose a poem, then read its introduction and notes as well as its translation.",
+      "Compare how a prose account organizes the mythological material.",
+      "Compare the wording of a shared poem across translations."
+    ],
+    "question": "Which parts of your reading come from a medieval witness, and which come from a modern editor or translator?",
+    "episode_ids": [
+      "Buzzsprout-17269686",
+      "Buzzsprout-18711960"
+    ]
+  },
+  {
+    "id": "sagas-and-language",
+    "title": "Sagas, manuscripts and words",
+    "intro": "Follow a story from a readable edition towards the witnesses and language behind it.",
+    "resources": [
+      "sagas",
+      "iceland",
+      "handrit",
+      "onp",
+      "skaldic",
+      "runor"
+    ],
+    "steps": [
+      "Begin with one saga and record its title and translator.",
+      "Read a modern study for social and regional context.",
+      "Explore the catalogue and notice the copying dates of manuscripts.",
+      "Use a dictionary to investigate a word in context.",
+      "Try a specialist poetry record and identify its editor.",
+      "Explore an inscription and preserve its identifier when taking notes."
+    ],
+    "question": "How does the kind of text change what you can reasonably ask it to tell you?",
+    "episode_ids": [
+      "Buzzsprout-18882045",
+      "Buzzsprout-17813267"
+    ]
+  },
+  {
+    "id": "ships-and-horizons",
+    "title": "Ships, routes and distant shores",
+    "intro": "Connect vessels with the places, trade and evidence of travel.",
+    "resources": [
+      "skuldelev",
+      "hedeby",
+      "meadows",
+      "meadows-1021"
+    ],
+    "steps": [
+      "Examine the difference between surviving ship parts and a reconstruction.",
+      "Place maritime travel alongside a trading town and land routes.",
+      "Read the official record for the Newfoundland site.",
+      "Follow the dating study, paying attention to the exact claim supported by the method."
+    ],
+    "question": "What does each source establish about travel, and what does it leave unresolved?",
+    "episode_ids": [
+      "Buzzsprout-17149679",
+      "Buzzsprout-17580214"
+    ]
+  },
+  {
+    "id": "society-and-power",
+    "title": "Households, wealth and power",
+    "intro": "Broaden the view beyond raids to social relationships, objects and public claims.",
+    "resources": [
+      "viking-world",
+      "slavery",
+      "hoards",
+      "jelling",
+      "iceland"
+    ],
+    "steps": [
+      "Use objects to begin asking questions about everyday activity.",
+      "Include coercion and inequality when considering Viking society.",
+      "Ask how an object’s life might differ from the moment it was buried.",
+      "Compare monumental claims with their archaeological setting.",
+      "Read a regional social history in greater depth."
+    ],
+    "question": "How do wealth, authority and status appear differently in texts, objects and monuments?",
+    "episode_ids": [
+      "Buzzsprout-17054400",
+      "Buzzsprout-17734018"
+    ]
+  },
+  {
+    "id": "reading-archaeology",
+    "title": "Learn to read a discovery",
+    "intro": "Work from accessible explanations towards methods, interpretation and debate.",
+    "resources": [
+      "gjellestad",
+      "galloway",
+      "birka",
+      "meadows-1021",
+      "torksey"
+    ],
+    "steps": [
+      "Separate a survey detection from subsequent confirmation and dating.",
+      "Follow a research project that asks questions about objects and their wrapping.",
+      "Distinguish analytical findings from an argument about a person’s life.",
+      "Identify exactly what the dating method measures.",
+      "Use a project bibliography to move from overview to specialist report."
+    ],
+    "question": "For each claim, can you name the observation, the method and the interpretive step?",
+    "episode_ids": [
+      "Buzzsprout-18869685"
+    ]
+  }
+]

@@ -1,0 +1,185 @@
+[
+  {
+    "id": "meadows-1021",
+    "title": "L’Anse aux Meadows: a date for an activity",
+    "place": "Newfoundland, Canada",
+    "period": "AD 1021",
+    "milestone": "Study online 2021; journal issue 2022",
+    "method": "Dating",
+    "intro": "A precise date can transform a discussion without answering every question about a settlement.",
+    "sections": [
+      {
+        "heading": "Evidence",
+        "text": "Kuitems and colleagues used the radiocarbon signal associated with AD 993 and tree-ring measurements to date Norse activity at the Newfoundland site to AD 1021.",
+        "sources": [
+          "meadows-1021"
+        ]
+      },
+      {
+        "heading": "Interpretation",
+        "text": "The study supplies a firm chronological point within the history of Norse activity in the Americas. Read it alongside the archaeological site record.",
+        "sources": [
+          "meadows-1021",
+          "meadows"
+        ]
+      },
+      {
+        "heading": "What remains open",
+        "text": "This date alone does not establish first arrival, the total length of occupation, or which named saga traveller was present. Those are separate historical questions.",
+        "sources": [
+          "meadows-1021"
+        ]
+      }
+    ],
+    "episode_ids": [
+      "Buzzsprout-17850122",
+      "Buzzsprout-17580214"
+    ],
+    "reviewed": "2026-09-13"
+  },
+  {
+    "id": "birka-bj581",
+    "title": "Birka Bj.581: burial, biology and interpretation",
+    "place": "Birka, Sweden",
+    "period": "Viking Age",
+    "milestone": "Reassessment published 2019",
+    "method": "Burial analysis",
+    "intro": "The strongest conclusions are clearer when biological analysis and social interpretation are kept distinct.",
+    "sections": [
+      {
+        "heading": "Evidence",
+        "text": "The 2019 reassessment discusses a richly furnished weapon burial whose skeletal and genomic analysis identified the buried individual as biologically female.",
+        "sources": [
+          "birka"
+        ]
+      },
+      {
+        "heading": "Interpretation",
+        "text": "Price and colleagues argue for a professional warrior identity. Their article examines the grave’s context and responds to debate following the 2017 genetic publication.",
+        "sources": [
+          "birka"
+        ]
+      },
+      {
+        "heading": "What remains open",
+        "text": "Biological sex does not by itself reveal an occupation or a person’s self-understanding. The meaning of the burial assemblage requires interpretation, and one burial cannot establish how common any role was.",
+        "sources": [
+          "birka"
+        ]
+      }
+    ],
+    "episode_ids": [
+      "Buzzsprout-19440990"
+    ],
+    "reviewed": "2026-09-13"
+  },
+  {
+    "id": "gjellestad",
+    "title": "Gjellestad: from radar trace to investigation",
+    "place": "Halden, Norway",
+    "period": "Early Viking Age, as reported in 2020",
+    "milestone": "Radar discovery 2018; report updated 2020",
+    "method": "Survey & dating",
+    "intro": "A case study in how one kind of investigation leads to another.",
+    "sections": [
+      {
+        "heading": "Evidence",
+        "text": "NIKU reports that ground-penetrating radar detected the ship in 2018. Its January 2020 update describes preliminary investigation and timber dating supporting an early Viking Age attribution.",
+        "sources": [
+          "gjellestad"
+        ]
+      },
+      {
+        "heading": "Interpretation",
+        "text": "The agreement between survey results and later investigation supports the identification of an archaeological ship. The report connects its setting with burial mounds and buildings.",
+        "sources": [
+          "gjellestad"
+        ]
+      },
+      {
+        "heading": "What remains open",
+        "text": "Radar shapes do not provide a complete biography of a site. This entry covers the 2018–2020 milestone and does not present it as the project’s latest excavation report.",
+        "sources": [
+          "gjellestad"
+        ]
+      }
+    ],
+    "episode_ids": [
+      "Buzzsprout-18869685"
+    ],
+    "reviewed": "2026-09-13"
+  },
+  {
+    "id": "galloway-hoard",
+    "title": "The Galloway Hoard: objects and their wrapping",
+    "place": "Dumfries and Galloway, Scotland",
+    "period": "Buried around AD 900",
+    "milestone": "Discovered 2014",
+    "method": "Conservation & context",
+    "intro": "The materials around an object can be evidence in their own right.",
+    "sections": [
+      {
+        "heading": "Evidence",
+        "text": "National Museums Scotland describes a hoard discovered in 2014, buried around AD 900, with precious objects and surviving textiles and leather around them.",
+        "sources": [
+          "galloway"
+        ]
+      },
+      {
+        "heading": "Interpretation",
+        "text": "Studying those materials can help researchers investigate how objects were gathered and prepared for burial. The museum places the work within a wider study of Viking Age hoarding.",
+        "sources": [
+          "galloway",
+          "hoards"
+        ]
+      },
+      {
+        "heading": "What remains open",
+        "text": "A hoard is not a transparent label for its owner’s identity. The makers, users and people who buried its objects may have been different; the reason for burial requires an argument.",
+        "sources": [
+          "hoards"
+        ]
+      }
+    ],
+    "episode_ids": [
+      "Buzzsprout-17054400"
+    ],
+    "reviewed": "2026-09-13"
+  },
+  {
+    "id": "skuldelev-ships",
+    "title": "Skuldelev: ships made into a barrier",
+    "place": "Roskilde Fjord, Denmark",
+    "period": "11th century",
+    "milestone": "Ships excavated 1962",
+    "method": "Maritime archaeology",
+    "intro": "A vessel’s final use may be very different from the purpose for which it was built.",
+    "sections": [
+      {
+        "heading": "Evidence",
+        "text": "The Viking Ship Museum describes five deliberately sunk ships forming a barrier in Roskilde Fjord. Its account dates the first phase to about 1060–1070 and records excavation in 1962.",
+        "sources": [
+          "skuldelev"
+        ]
+      },
+      {
+        "heading": "Interpretation",
+        "text": "The museum suggests protection from seaborne attack or control of traffic as possible purposes. Its reconstructions draw on documented surviving parts.",
+        "sources": [
+          "skuldelev"
+        ]
+      },
+      {
+        "heading": "What remains open",
+        "text": "Missing and deformed timbers make reconstruction an interpretive process. A reconstructed vessel should be distinguished from the archaeological remains on which it is based.",
+        "sources": [
+          "skuldelev"
+        ]
+      }
+    ],
+    "episode_ids": [
+      "Buzzsprout-17149679"
+    ],
+    "reviewed": "2026-09-13"
+  }
+]

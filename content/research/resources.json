@@ -1,0 +1,502 @@
+[
+  {
+    "id": "viking-world",
+    "title": "The Viking World",
+    "credit": "Swedish History Museum",
+    "url": "https://historiska.se/en/exhibitions/the-viking-world/",
+    "kind": "Museum guide",
+    "topic": "History & society",
+    "level": "Start here",
+    "access": "Free online",
+    "summary": "Begin with an object-led introduction to Viking life and belief, then follow the museum’s links into its online exhibition.",
+    "context": "A modern museum interpretation. Exhibition admission and online reading are separate; check the museum for visiting details.",
+    "citation": "Swedish History Museum. “The Viking World.” Exhibition and online collection guide.",
+    "language": "English",
+    "rights": "Linked source only. Check the source’s terms before reusing its text or images.",
+    "reviewed": "2026-09-13",
+    "status": "active",
+    "episode_ids": [
+      "Buzzsprout-18842527"
+    ]
+  },
+  {
+    "id": "myth-sources",
+    "title": "Sources for Norse mythology",
+    "credit": "Swedish History Museum",
+    "url": "https://historiska.se/en/explore-history/history-hub/sources-for-norse-mythology/",
+    "kind": "Museum guide",
+    "topic": "Myth & belief",
+    "level": "Start here",
+    "access": "Free online",
+    "summary": "A starting point for asking how surviving texts and material traces shape our knowledge of Norse mythology.",
+    "context": "Read this before comparing translations. A surviving medieval account is not a direct recording of every earlier belief.",
+    "citation": "Swedish History Museum. “Sources for Norse mythology.” History hub.",
+    "language": "English",
+    "rights": "Linked source only. Check the source’s terms before reusing its text or images.",
+    "reviewed": "2026-09-13",
+    "status": "active",
+    "episode_ids": [
+      "Buzzsprout-17269686"
+    ]
+  },
+  {
+    "id": "poetic-edda",
+    "title": "The Poetic Edda: A Dual-Language Edition",
+    "credit": "Edward Pettit · Open Book Publishers",
+    "url": "https://www.openbookpublishers.com/books/10.11647/obp.0308",
+    "kind": "Primary text / translation",
+    "topic": "Myth & belief",
+    "level": "Go deeper",
+    "access": "Free online",
+    "summary": "Read Old Norse poems alongside a modern English translation, with introductions, notes and further reading.",
+    "context": "A modern edition of medieval witnesses. Consult the introduction and apparatus rather than treating every poem as contemporary reportage.",
+    "citation": "Pettit, Edward. The Poetic Edda: A Dual-Language Edition. Open Book Publishers, 2023. DOI: 10.11647/OBP.0308.",
+    "language": "English / Old Norse",
+    "rights": "Publisher states CC BY-NC 4.0. We link to the edition and do not reproduce its text or images.",
+    "reviewed": "2026-09-13",
+    "status": "active",
+    "episode_ids": [
+      "Buzzsprout-18978640",
+      "Buzzsprout-17616623"
+    ]
+  },
+  {
+    "id": "prose-edda",
+    "title": "The Prose Edda",
+    "credit": "Snorri Sturluson · translated by Jesse Byock · Penguin Classics",
+    "url": "https://www.penguin.co.uk/books/35334/the-prose-edda-by-sturluson-snorri/9780241752296",
+    "kind": "Primary text / translation",
+    "topic": "Myth & belief",
+    "level": "Go deeper",
+    "access": "Book / library access",
+    "summary": "Use this credited translation to explore Snorri’s account of gods, giants and the mythological world.",
+    "context": "The linked 2025 Penguin Archive edition is a specific 160-page edition. Check its contents; do not assume every edition has identical selections.",
+    "citation": "Sturluson, Snorri. The Prose Edda. Translation, introduction and notes by Jesse Byock. Penguin Archive, 2025. ISBN 9780241752296.",
+    "language": "English",
+    "rights": "Linked source only. Check the source’s terms before reusing its text or images.",
+    "reviewed": "2026-09-13",
+    "status": "active",
+    "episode_ids": [
+      "Buzzsprout-18711960",
+      "Buzzsprout-18882045"
+    ]
+  },
+  {
+    "id": "elder-edda",
+    "title": "The Elder Edda: A Book of Viking Lore",
+    "credit": "Andy Orchard, translator and editor · Penguin Classics",
+    "url": "https://www.penguin.co.uk/books/34350/the-elder-edda/9780140435856",
+    "kind": "Primary text / translation",
+    "topic": "Myth & belief",
+    "level": "Go deeper",
+    "access": "Book / library access",
+    "summary": "A second credited English translation for comparing the wording and presentation of Eddic poetry.",
+    "context": "Comparing translations can expose choices that a single modern wording conceals. This is a publisher listing, not a free full text.",
+    "citation": "The Elder Edda: A Book of Viking Lore. Translated and edited by Andy Orchard. Penguin Classics, 2011. ISBN 9780140435856.",
+    "language": "English",
+    "rights": "Linked source only. Check the source’s terms before reusing its text or images.",
+    "reviewed": "2026-09-13",
+    "status": "active",
+    "episode_ids": [
+      "Buzzsprout-18944978"
+    ]
+  },
+  {
+    "id": "handrit",
+    "title": "Handrit: manuscript catalogue",
+    "credit": "National and University Library of Iceland; Árni Magnússon Institute; Arnamagnæan Collection",
+    "url": "https://handrit.is/about?lang=en",
+    "kind": "Research tool",
+    "topic": "Texts & language",
+    "level": "Research",
+    "access": "Free online",
+    "summary": "Find manuscript descriptions and, where supplied, digital images of the physical witnesses behind sagas, poetry and other texts.",
+    "context": "Coverage and descriptive detail vary. A manuscript’s copying date and the age of the story it preserves are different questions.",
+    "citation": "Handrit. “About.” Joint manuscript catalogue.",
+    "language": "English interface / multilingual manuscripts",
+    "rights": "Linked source only. Check the source’s terms before reusing its text or images.",
+    "reviewed": "2026-09-13",
+    "status": "active",
+    "episode_ids": [
+      "Buzzsprout-18882045"
+    ]
+  },
+  {
+    "id": "skaldic",
+    "title": "Skaldic Poetry of the Scandinavian Middle Ages",
+    "credit": "Skaldic Poetry project",
+    "url": "https://skaldic.org/db.php?if=default&table=files&view=",
+    "kind": "Research tool",
+    "topic": "Texts & language",
+    "level": "Research",
+    "access": "Free online",
+    "summary": "Follow the specialist project into skalds, verses, editions and the vocabulary of poetry.",
+    "context": "A specialist research interface. Consult each edition’s editorial credits and distinguish published material from working database entries.",
+    "citation": "Skaldic Poetry of the Scandinavian Middle Ages. Project database.",
+    "language": "English / Old Norse",
+    "rights": "The project notes copyright restrictions and custodians’ rights. Link only; no database, texts or images are mirrored here.",
+    "reviewed": "2026-09-13",
+    "status": "active",
+    "episode_ids": [
+      "Buzzsprout-17813267"
+    ]
+  },
+  {
+    "id": "onp",
+    "title": "Dictionary of Old Norse Prose",
+    "credit": "University of Copenhagen · Arnamagnæan Collection",
+    "url": "https://onp.ku.dk/onp/",
+    "kind": "Research tool",
+    "topic": "Texts & language",
+    "level": "Research",
+    "access": "Free online",
+    "summary": "Look up prose vocabulary and follow citations, manuscript references and bibliographic records.",
+    "context": "This is a historical dictionary, not an automatic translator. Check a word in its cited context and read the entry’s editorial status.",
+    "citation": "University of Copenhagen. Dictionary of Old Norse Prose (ONP).",
+    "language": "English / Danish / Old Norse",
+    "rights": "Linked source only. Check the source’s terms before reusing its text or images.",
+    "reviewed": "2026-09-13",
+    "status": "active",
+    "episode_ids": []
+  },
+  {
+    "id": "runor",
+    "title": "Runor: runic inscription research",
+    "credit": "Swedish National Heritage Board and Uppsala University",
+    "url": "https://www.raa.se/in-english/digital-services/about-runor/",
+    "kind": "Research tool",
+    "topic": "Texts & language",
+    "level": "Research",
+    "access": "Free online",
+    "summary": "Use the official introduction to reach searches for inscriptions, texts and find locations.",
+    "context": "Record the inscription identifier when citing a result. Transliterations, normalized text and translations serve different purposes.",
+    "citation": "Swedish National Heritage Board. “About Runor (Runes).” Updated 17 December 2025.",
+    "language": "English introduction / multilingual records",
+    "rights": "Linked source only. Check the source’s terms before reusing its text or images.",
+    "reviewed": "2026-09-13",
+    "status": "active",
+    "episode_ids": [
+      "Buzzsprout-17734018"
+    ]
+  },
+  {
+    "id": "ash-elm",
+    "title": "Children of Ash and Elm: A History of the Vikings",
+    "credit": "Neil Price · Basic Books",
+    "url": "https://www.hachettebookgroup.com/titles/neil-price/children-of-ash-and-elm/9781541601116/",
+    "kind": "Book",
+    "topic": "History & society",
+    "level": "Go deeper",
+    "access": "Book / library access",
+    "summary": "A sustained modern synthesis connecting material evidence with politics, society and belief.",
+    "context": "Read as one scholar’s interpretation and follow its references. The linked record is the 2022 paperback edition.",
+    "citation": "Price, Neil. Children of Ash and Elm: A History of the Vikings. Basic Books, paperback 2022. ISBN 9781541601116.",
+    "language": "English",
+    "rights": "Linked source only. Check the source’s terms before reusing its text or images.",
+    "reviewed": "2026-09-13",
+    "status": "active",
+    "episode_ids": [
+      "Buzzsprout-17503297"
+    ]
+  },
+  {
+    "id": "viking-world-book",
+    "title": "The Viking World",
+    "credit": "Stefan Brink and Neil Price, editors · Routledge",
+    "url": "https://www.routledge.com/The-Viking-World/Brink-Price/p/book/9780415692625",
+    "kind": "Book",
+    "topic": "History & society",
+    "level": "Research",
+    "access": "Book / library access",
+    "summary": "A multi-author reference work spanning disciplines and regions; choose chapters to pursue a question in depth.",
+    "context": "The volume dates to 2008. Pair its chapters with later research rather than treating its publication-era synthesis as the final word.",
+    "citation": "Brink, Stefan, and Neil Price, eds. The Viking World. Routledge, 2008. ISBN 9780415692625.",
+    "language": "English",
+    "rights": "Linked source only. Check the source’s terms before reusing its text or images.",
+    "reviewed": "2026-09-13",
+    "status": "active",
+    "episode_ids": [
+      "Buzzsprout-17771098"
+    ]
+  },
+  {
+    "id": "sagas",
+    "title": "The Sagas of Icelanders",
+    "credit": "Various authors and translators · Penguin Classics",
+    "url": "https://www.penguinrandomhouse.com/books/332353/the-sagas-of-icelanders-by-various/",
+    "kind": "Primary text / translation",
+    "topic": "Texts & language",
+    "level": "Go deeper",
+    "access": "Book / library access",
+    "summary": "An English-language collection for exploring the Icelandic saga tradition as literature and a subject of historical study.",
+    "context": "Cite the individual saga, its translator and your edition’s page numbers. A collection credit does not replace the translator’s credit for a quoted passage.",
+    "citation": "Various. The Sagas of Icelanders. Penguin Classics, 2001. ISBN 9780141000039. Consult the volume for individual translation credits.",
+    "language": "English",
+    "rights": "Linked source only. Check the source’s terms before reusing its text or images.",
+    "reviewed": "2026-09-13",
+    "status": "active",
+    "episode_ids": [
+      "Buzzsprout-17054359"
+    ]
+  },
+  {
+    "id": "iceland",
+    "title": "Viking Age Iceland",
+    "credit": "Jesse L. Byock · Penguin Books",
+    "url": "https://www.penguinrandomhouse.com/books/333339/viking-age-iceland-by-jesse-l-byock/",
+    "kind": "Book",
+    "topic": "History & society",
+    "level": "Go deeper",
+    "access": "Book / library access",
+    "summary": "A companion to saga reading that brings social relationships, law, farming and power into focus.",
+    "context": "This is modern scholarship on Iceland. Its regional focus should not be generalized to every Norse community.",
+    "citation": "Byock, Jesse L. Viking Age Iceland. Penguin Books, 2001. ISBN 9780140291155.",
+    "language": "English",
+    "rights": "Linked source only. Check the source’s terms before reusing its text or images.",
+    "reviewed": "2026-09-13",
+    "status": "active",
+    "episode_ids": [
+      "Buzzsprout-17231023"
+    ]
+  },
+  {
+    "id": "skuldelev",
+    "title": "Skuldelev 5: the ship-find",
+    "credit": "Viking Ship Museum, Roskilde",
+    "url": "https://www.vikingeskibsmuseet.dk/en/professions/boatyard/building-projects/the-viking-ship-skuldelev-5/translate-to-english-fundet",
+    "kind": "Museum guide",
+    "topic": "Ships & travel",
+    "level": "Start here",
+    "access": "Free online",
+    "summary": "Explore why five ships were deliberately sunk in Roskilde Fjord and how the museum interprets the barrier.",
+    "context": "The purpose of the barrier is interpreted from context. A reconstruction is a research model, not an untouched surviving vessel.",
+    "citation": "Viking Ship Museum. “The ship-find.” Skuldelev 5 building project.",
+    "language": "English",
+    "rights": "Linked source only. Check the source’s terms before reusing its text or images.",
+    "reviewed": "2026-09-13",
+    "status": "active",
+    "episode_ids": [
+      "Buzzsprout-17149679"
+    ]
+  },
+  {
+    "id": "hoards",
+    "title": "Understanding hoards in the Viking Age",
+    "credit": "National Museums Scotland",
+    "url": "https://www.nms.ac.uk/discover-catalogue/understanding-hoards-in-the-viking-age",
+    "kind": "Museum guide",
+    "topic": "Trade & settlement",
+    "level": "Start here",
+    "access": "Free online",
+    "summary": "An introduction to buried collections, bullion and the questions raised by the Galloway Hoard.",
+    "context": "An object’s place of manufacture, movement and eventual burial need not identify the same person or community.",
+    "citation": "National Museums Scotland. “Understanding hoards in the Viking Age.”",
+    "language": "English",
+    "rights": "Linked source only. Check the source’s terms before reusing its text or images.",
+    "reviewed": "2026-09-13",
+    "status": "active",
+    "episode_ids": [
+      "Buzzsprout-17054400"
+    ]
+  },
+  {
+    "id": "galloway",
+    "title": "Unwrapping the Galloway Hoard",
+    "credit": "National Museums Scotland",
+    "url": "https://www.nms.ac.uk/collections/departments/scottish-history-archaeology/projects/unwrapping-the-galloway-hoard",
+    "kind": "Research project",
+    "topic": "Archaeology",
+    "level": "Go deeper",
+    "access": "Free online",
+    "summary": "Follow the museum’s research into the hoard and the unusually preserved materials wrapped around its objects.",
+    "context": "A research-project account rather than a single completed excavation report. Follow its linked studies for the methods behind individual findings.",
+    "citation": "National Museums Scotland. “Unwrapping the Galloway Hoard.”",
+    "language": "English",
+    "rights": "Linked source only. Check the source’s terms before reusing its text or images.",
+    "reviewed": "2026-09-13",
+    "status": "active",
+    "episode_ids": [
+      "Buzzsprout-17054400"
+    ]
+  },
+  {
+    "id": "meadows",
+    "title": "L’Anse aux Meadows: designated historic site",
+    "credit": "Parks Canada",
+    "url": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=236",
+    "kind": "Museum guide",
+    "topic": "Ships & travel",
+    "level": "Start here",
+    "access": "Free online",
+    "summary": "Use the official designation record to understand the remains and protected setting of the Norse site in Newfoundland.",
+    "context": "The record includes earlier interpretive statements. Pair it with the 1021 study; archaeology does not establish the identity of every visitor named in sagas.",
+    "citation": "Parks Canada. “L’Anse aux Meadows National Historic Site of Canada.” Directory of Federal Heritage Designations, record 236.",
+    "language": "English",
+    "rights": "Linked source only. Check the source’s terms before reusing its text or images.",
+    "reviewed": "2026-09-13",
+    "status": "active",
+    "episode_ids": [
+      "Buzzsprout-17580214"
+    ]
+  },
+  {
+    "id": "meadows-1021",
+    "title": "Evidence for European presence in the Americas in AD 1021",
+    "credit": "Margot Kuitems and co-authors · Nature / University of Groningen",
+    "url": "https://research.rug.nl/nl/publications/evidence-for-european-presence-in-the-americas-in-ad-1021/",
+    "kind": "Research paper",
+    "topic": "Archaeology",
+    "level": "Research",
+    "access": "Free online",
+    "summary": "Read the study that uses a radiocarbon event and tree rings to date Norse activity at L’Anse aux Meadows.",
+    "context": "The date marks an attested activity, not necessarily first arrival or the full duration of occupation. The repository links the published paper.",
+    "citation": "Kuitems, Margot, et al. “Evidence for European presence in the Americas in AD 1021.” Nature 601 (2022): 388–391. Published online 20 October 2021. DOI: 10.1038/s41586-021-03972-8.",
+    "language": "English paper / Dutch record",
+    "rights": "Repository identifies the published paper as CC BY. We link to the record; no paper or figures are reproduced.",
+    "reviewed": "2026-09-13",
+    "status": "active",
+    "episode_ids": [
+      "Buzzsprout-17850122"
+    ]
+  },
+  {
+    "id": "birka",
+    "title": "Viking warrior women? Reassessing Birka chamber grave Bj.581",
+    "credit": "Neil Price and co-authors · Antiquity",
+    "url": "https://www.cambridge.org/core/journals/antiquity/article/viking-warrior-women-reassessing-birka-chamber-grave-bj581/7CC691F69FAE51DDE905D27E049FADCD",
+    "kind": "Research paper",
+    "topic": "Archaeology",
+    "level": "Research",
+    "access": "Free online",
+    "summary": "Read the authors’ reassessment of a weapon burial and the debate following its genetic analysis.",
+    "context": "Distinguish the biological finding from arguments about occupation, identity and the meaning of grave goods.",
+    "citation": "Price, Neil, et al. “Viking warrior women? Reassessing Birka chamber grave Bj.581.” Antiquity 93, no. 367 (2019): 181–198. DOI: 10.15184/aqy.2018.258.",
+    "language": "English",
+    "rights": "Publisher states CC BY-NC-ND 4.0. Linked only; no article text, reconstructions or figures are reproduced.",
+    "reviewed": "2026-09-13",
+    "status": "active",
+    "episode_ids": [
+      "Buzzsprout-19440990"
+    ]
+  },
+  {
+    "id": "gjellestad",
+    "title": "The Gjellestad Ship confirmed to be from the Viking Age",
+    "credit": "Norwegian Institute for Cultural Heritage Research (NIKU)",
+    "url": "https://www.niku.no/en/2020/01/the-gjellestad-ship-confirmed-to-be-from-the-viking-age/",
+    "kind": "Research project",
+    "topic": "Archaeology",
+    "level": "Go deeper",
+    "access": "Free online",
+    "summary": "Follow an early report connecting a radar discovery with preliminary investigation and timber dating.",
+    "context": "This report was updated in January 2020. It is a dated research milestone, not a claim about the project’s present excavation status.",
+    "citation": "NIKU. “The Gjellestad Ship confirmed to be from the Viking Age.” 17 January 2020; updated 20 January 2020.",
+    "language": "English",
+    "rights": "Linked source only. Check the source’s terms before reusing its text or images.",
+    "reviewed": "2026-09-13",
+    "status": "active",
+    "episode_ids": [
+      "Buzzsprout-18869685"
+    ]
+  },
+  {
+    "id": "torksey",
+    "title": "Torksey: the Viking Great Army’s winter camp",
+    "credit": "University of York · Department of Archaeology",
+    "url": "https://www.york.ac.uk/archaeology/research/current-projects/torksey/",
+    "kind": "Research project",
+    "topic": "Archaeology",
+    "level": "Research",
+    "access": "Free online",
+    "summary": "A university project page connecting field investigation with publications on the winter camp of AD 872–873.",
+    "context": "Begin with the project bibliography, then consult the named reports for methods and dating.",
+    "citation": "University of York, Department of Archaeology. “Torksey.” Research project and bibliography.",
+    "language": "English",
+    "rights": "Linked source only. Check the source’s terms before reusing its text or images.",
+    "reviewed": "2026-09-13",
+    "status": "active",
+    "episode_ids": [
+      "Buzzsprout-18752783"
+    ]
+  },
+  {
+    "id": "england",
+    "title": "The history of the Vikings in England",
+    "credit": "English Heritage",
+    "url": "https://www.english-heritage.org.uk/visit/inspire-me/the-history-of-Vikings-in-england/",
+    "kind": "Museum guide",
+    "topic": "History & society",
+    "level": "Start here",
+    "access": "Free online",
+    "summary": "A regional introduction to raids and their written record, with Lindisfarne as a point of entry.",
+    "context": "Read accounts of violence with attention to who recorded them. England’s chronology is not a universal boundary for all Viking activity.",
+    "citation": "English Heritage. “The History of the Vikings in England.”",
+    "language": "English",
+    "rights": "Linked source only. Check the source’s terms before reusing its text or images.",
+    "reviewed": "2026-09-13",
+    "status": "active",
+    "episode_ids": [
+      "Buzzsprout-18752783"
+    ]
+  },
+  {
+    "id": "slavery",
+    "title": "Slaves and thralls in the Viking Age",
+    "credit": "National Museum of Denmark",
+    "url": "https://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-viking-age/power-and-aristocracy/slaves-and-thralls/",
+    "kind": "Museum guide",
+    "topic": "History & society",
+    "level": "Start here",
+    "access": "Free online",
+    "summary": "Include unfree people and the slave trade when studying Viking wealth, households and expansion.",
+    "context": "The page discusses coercion and sexual violence. Treat broad social statements as an introduction and follow the underlying sources for regional detail.",
+    "citation": "National Museum of Denmark. “Slaves and thralls in the Viking Age.” Historical knowledge.",
+    "language": "English",
+    "rights": "Linked source only. Check the source’s terms before reusing its text or images.",
+    "reviewed": "2026-09-13",
+    "status": "active",
+    "episode_ids": [
+      "Buzzsprout-18842527"
+    ]
+  },
+  {
+    "id": "hedeby",
+    "title": "Hedeby and the Danevirke",
+    "credit": "UNESCO World Heritage Centre",
+    "url": "https://whc.unesco.org/en/list/1553",
+    "kind": "Heritage record",
+    "topic": "Trade & settlement",
+    "level": "Go deeper",
+    "access": "Free online",
+    "summary": "Trace the relationship between a trading town, a border landscape and routes across land and sea.",
+    "context": "A heritage assessment brings together site significance and protection; it is not a substitute for individual excavation reports.",
+    "citation": "UNESCO World Heritage Centre. “Archaeological Border complex of Hedeby and the Danevirke.” World Heritage List, no. 1553.",
+    "language": "English",
+    "rights": "Linked source only. Check the source’s terms before reusing its text or images.",
+    "reviewed": "2026-09-13",
+    "status": "active",
+    "episode_ids": [
+      "Buzzsprout-17771098"
+    ]
+  },
+  {
+    "id": "jelling",
+    "title": "Jelling Mounds, Runic Stones and Church",
+    "credit": "UNESCO World Heritage Centre",
+    "url": "https://whc.unesco.org/en/list/697",
+    "kind": "Heritage record",
+    "topic": "Myth & belief",
+    "level": "Go deeper",
+    "access": "Free online",
+    "summary": "Explore a monumental setting for studying royal authority, commemoration and Christian conversion.",
+    "context": "Read royal inscriptions as claims made in a particular political setting, then compare them with the physical site.",
+    "citation": "UNESCO World Heritage Centre. “Jelling Mounds, Runic Stones and Church.” World Heritage List, no. 697.",
+    "language": "English",
+    "rights": "Linked source only. Check the source’s terms before reusing its text or images.",
+    "reviewed": "2026-09-13",
+    "status": "active",
+    "episode_ids": [
+      "Buzzsprout-17734018"
+    ]
+  }
+]

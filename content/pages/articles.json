@@ -39,6 +39,10 @@
     {
       "label": "Suggest an article",
       "url": "/contribute/"
+    },
+    {
+      "label": "Explore the Norse Library",
+      "url": "/library/"
     }
   ]
 }

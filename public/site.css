@@ -299,3 +299,48 @@ summary { display:list-item; }
 @media(max-width:800px) { .site-nav { flex-wrap:wrap; } .nav-links { flex-wrap:wrap; } .editorial-sections section { gap:28px; } }
 @media(max-width:600px) { .editorial-sections section { grid-template-columns:1fr;gap:4px; } .nav-links { gap:4px 20px; } .support-heading { margin-bottom:36px; } .support-actions { margin-bottom:54px; } }
 @media(forced-colors:active) { .button,.card { border:1px solid ButtonText; } }
+/* Norse Library: guided reading, source records and evidence-led case studies. */
+.research-heading { margin-bottom:34px;max-width:940px; }
+.research-nav { display:flex;flex-wrap:wrap;gap:12px 28px;border-top:1px solid #373027;border-bottom:1px solid #373027;padding:18px 0;margin-bottom:64px;font:.9rem/1.6 Arial,sans-serif; }
+.research-nav a { padding:8px 0; }
+.learning-grid { display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px; }
+.learning-card { border-top:1px solid #9a8357;padding:24px 0 20px; }
+.learning-card .number { font-size:1.8rem;margin-bottom:18px; }
+.learning-card h3 a { color:#e8e1d3;text-decoration:none; }
+.learning-card h3 a:hover { text-decoration:underline; }
+.learning-card p { max-width:30ch; }
+.research-filters { display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;background:#1c1b19;border:1px solid #494134;padding:24px;align-items:end; }
+.research-search { grid-column:1/-1; }
+.research-filters label { display:block;font:.85rem/1.5 Arial,sans-serif;margin-bottom:8px; }
+.research-filters input,.research-filters select { width:100%;min-height:48px;padding:10px;border:1px solid #9a8357;background:#11100e;color:#e8e1d3;font:1rem Arial,sans-serif;border-radius:3px; }
+.research-filters button { justify-self:start;white-space:nowrap; }
+.research-count { font:.9rem/1.6 Arial,sans-serif;margin:24px 0; }
+.resource-grid { display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px; }
+.resource-card { min-width:0;border:1px solid #494134;border-top:2px solid #9a8357;padding:28px;scroll-margin-top:28px; }
+.resource-card:target { outline:2px solid #efd396;outline-offset:5px; }
+.resource-card h3 { font-size:1.55rem; }
+.resource-card h3 a { color:#e8e1d3; }
+.resource-credit { font:.85rem/1.65 Arial,sans-serif;color:#bfb6a6; }
+.resource-context { font-size:.98rem; }
+.resource-tags { display:flex;flex-wrap:wrap;gap:8px;font:.75rem/1.6 Arial,sans-serif; }
+.resource-tags span { border:1px solid #6c593b;padding:3px 9px;color:#e8e1d3; }
+.resource-card details { border-top:1px solid #373027;padding-top:12px; }
+.resource-card details p,.resource-card details li { font-size:.85rem;overflow-wrap:anywhere; }
+.resource-card details ul { padding-left:20px; }
+.reading-path { padding-left:30px;max-width:850px; }
+.reading-path>li { padding:0 0 28px 12px;margin-bottom:28px;border-bottom:1px solid #373027; }
+.reading-path>li::marker { color:#c8aa71;font:1.3rem Georgia,serif; }
+.reading-path h2 { font-size:1.8rem; }
+.reading-question { border-left:3px solid #9a8357;padding:24px 32px;background:#1c1b19; }
+.reading-question h2 { font-size:1.6rem; }
+.evidence-sections { max-width:800px;margin-top:45px; }
+.evidence-sections section { margin-bottom:40px;padding-top:24px;border-top:1px solid #494134; }
+.evidence-sections h2 { font-size:2rem; }
+.evidence-sections p { font-size:1.15rem; }
+.claim-citations { white-space:nowrap;font-size:.9rem; }
+.claim-citations a { display:inline-block;padding:4px 6px; }
+.source-list { max-width:850px;padding-left:24px; }
+.source-list li { padding:12px 0;scroll-margin-top:24px; }
+.source-list li:target { outline:2px solid #efd396;outline-offset:6px; }
+@media(max-width:800px) { .learning-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .resource-card { padding:22px; } .research-filters { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media(max-width:600px) { .learning-grid,.resource-grid { grid-template-columns:1fr; } .learning-card p { max-width:none; } .research-nav { gap:6px 20px;margin-bottom:42px; } .research-filters { grid-template-columns:1fr;padding:18px;gap:16px; } .research-filters button { white-space:normal; } .reading-path h2 { font-size:1.5rem; } .reading-question { padding:20px; } .resource-card { padding:22px; } }

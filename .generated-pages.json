@@ -1,6 +1,12 @@
 [
   "404.html",
   "about/index.html",
+  "archaeology/birka-bj581/index.html",
+  "archaeology/galloway-hoard/index.html",
+  "archaeology/gjellestad/index.html",
+  "archaeology/index.html",
+  "archaeology/meadows-1021/index.html",
+  "archaeology/skuldelev-ships/index.html",
   "articles/index.html",
   "contact/index.html",
   "contribute/index.html",
@@ -58,6 +64,13 @@
   "episodes/19440990-hervor-the-viking-shield-maiden-and-the-cursed-blade/index.html",
   "episodes/index.html",
   "index.html",
+  "library/editorial/index.html",
   "library/index.html",
+  "library/paths/first-steps/index.html",
+  "library/paths/gods-and-myths/index.html",
+  "library/paths/reading-archaeology/index.html",
+  "library/paths/sagas-and-language/index.html",
+  "library/paths/ships-and-horizons/index.html",
+  "library/paths/society-and-power/index.html",
   "privacy/index.html"
 ]
