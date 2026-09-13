@@ -1,0 +1,50 @@
+{
+  "slug": "where-norse-mythology-comes-from",
+  "title": "Where does Norse mythology come from?",
+  "description": "A beginner’s guide to the Eddas, medieval sources and archaeological clues behind Norse mythology, with credited reading and related listening.",
+  "intro": "Before choosing a favourite version of a Norse myth, ask how the story reached us. That question opens a more rewarding way to read: with curiosity about both the tale and the people who preserved it.",
+  "episode_ids": [
+    "Buzzsprout-17269686",
+    "Buzzsprout-18882045"
+  ],
+  "path": "gods-and-myths",
+  "sections": [
+    {
+      "heading": "The stories and the surviving sources",
+      "text": "Many surviving written accounts preserve traditions that had circulated orally. Their recording took place after the Viking Age, in a Christian setting. That distance matters: a medieval account is evidence to interpret, rather than an unfiltered recording of what every earlier community believed. The Swedish History Museum introduces this problem alongside the material evidence.",
+      "sources": [
+        "myth-sources"
+      ]
+    },
+    {
+      "heading": "Why there are two Eddas",
+      "text": "The Poetic Edda brings together poems about gods and legendary heroes. Snorri Sturluson’s Edda, commonly called the Prose Edda, is a different work: a thirteenth-century guide to mythology and poetic language. Reading them together lets a beginner encounter different forms of storytelling instead of treating “the Edda” as a single book.",
+      "sources": [
+        "myth-sources",
+        "prose-edda"
+      ]
+    },
+    {
+      "heading": "Choose an edition you can follow",
+      "text": "Our library links to Edward Pettit’s dual-language Poetic Edda and a Penguin edition of the Prose Edda translated by Jesse Byock. These are credited modern editions, not interchangeable containers for an anonymous ancient text. Byock also provides an introduction and notes in the linked edition. When you record a passage, note the work, translator, edition and page or verse so you can find it again.",
+      "sources": [
+        "poetic-edda",
+        "prose-edda"
+      ]
+    },
+    {
+      "heading": "Look beyond the written page",
+      "text": "The museum also points to place names, amulets and images on stones as sources for studying belief. Identifying an image with a particular myth involves interpretation. Keep the object itself and the proposed explanation distinct when you read a label or retelling.",
+      "sources": [
+        "myth-sources"
+      ]
+    },
+    {
+      "heading": "A first reading session",
+      "text": "Try this approach: begin with the museum introduction, choose one poem or prose episode, and write down two questions. What does this particular source actually say? What has the modern introduction helped you understand? Follow our guided reading path for the editions and context. You do not need to master every name before enjoying a story; you need a reliable route back to its source.",
+      "sources": []
+    }
+  ],
+  "published": "2026-09-13",
+  "author": "Viking Legacy & Lore"
+}
