@@ -346,3 +346,4 @@ summary { display:list-item; }
 @media(max-width:600px) { .learning-grid,.resource-grid { grid-template-columns:1fr; } .learning-card p { max-width:none; } .research-nav { gap:6px 20px;margin-bottom:42px; } .research-filters { grid-template-columns:1fr;padding:18px;gap:16px; } .research-filters button { white-space:normal; } .reading-path h2 { font-size:1.5rem; } .reading-question { padding:20px; } .resource-card { padding:22px; } }
 
 .reading-article {max-width: 780px;margin-inline:auto}.reading-article header {min-height:0;padding:0;background:none}.reading-article section {margin-block:3rem}.reading-article p {line-height:1.85}.reading-article .source-list {overflow-wrap:anywhere}
+.reading-article header {display:block;text-align:left;width:auto}.reading-article header::before,.reading-article header::after {display:none}.reading-article .page-title {font-size:clamp(2.5rem,5vw,4.2rem);overflow-wrap:break-word}
