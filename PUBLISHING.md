@@ -1,0 +1,50 @@
+# Publishing episodes
+
+The site is generated from one JSON file per episode in `content/episodes/`. You do not edit layout code to publish an episode. GitHub `main` remains the source of truth.
+
+## Import new podcast episodes
+
+After publishing an episode on Buzzsprout:
+
+```sh
+mkdir -p .cache
+curl -fLs https://feeds.buzzsprout.com/2459523.rss -o .cache/feed.xml
+python3 import_feed.py .cache/feed.xml
+```
+
+The importer adds new entries only. It preserves existing edits, slugs, platform IDs and source lists. It never deletes entries merely because they disappear from the feed. It does not refresh existing notes; review those manually when correcting a published episode. New entries default to published; set `draft: true` immediately if you want to hold one back before building or committing.
+
+## Review the content file
+
+- `title`, `summary`: plain text. Keep the title faithful to the published episode; make the summary a short, accurate hook.
+- `notes`: a list of plain text paragraphs. HTML is escaped rather than executed.
+- `published`: ISO date/time including timezone. The newest published entry drives the homepage feature; older entries fill the archive.
+- `duration`: whole seconds.
+- `category`: a consistent topic label; the archive generates its topic menu automatically.
+- `image`: a real public image path such as `/cover.jpg`, or an HTTPS image URL. Put new local images in `public/`.
+- `audio_url`, `publication_url`: the real audio enclosure and original episode page.
+- `spotify_id`: the 22-character ID after `/episode/` in a verified Spotify episode URL, or `null`.
+- `youtube_id`: the 11-character ID after `v=` in the matching YouTube video URL, or `null`.
+- `sources`: an array of verified reading references, each with `title`, HTTPS `url`, and optional `note`. Leave empty when none have been supplied. A bibliography appears only when this list has entries; published notes always retain a link to the original episode.
+- `related_ids`: optional ordered list of episode IDs; otherwise related episodes favor the same category.
+- `draft`: `true` excludes an entry from pages, related links and sitemap; `false` publishes it. Unpublishing removes only that entry's previously generated HTML.
+
+Keep `id` and `slug` stable once published. Changing a slug requires a redirect from the old URL. Do not invent platform IDs or source citations. The Start Here selections remain in `homepage.json`; the latest episode and recent previews are automatic.
+
+## Preview, check and publish
+
+```sh
+python3 build.py
+python3 -m unittest -v test_site.py
+python3 -m http.server 8766 --directory public
+```
+
+Inspect `http://localhost:8766/`, `/episodes/`, and the new page, including mobile layout. Then commit the data and generated files and push to `main`. Cloudflare's existing `npx wrangler deploy` runs the `python3 build.py` custom build before uploading `public/`; this prevents a forgotten local render from leaving the deployed content stale. The build performs no network calls.
+
+When posting a correction, edit the JSON and repeat the same workflow. Do not modify generated HTML directly: it will be overwritten on the next build.
+
+## What is automated and what is editorial
+
+Automated: page creation, archive order, topic filters, latest/recent homepage selections, optional media players, related-episode fallback, metadata and sitemap.
+
+Editorial: accurate summaries, episode-to-video matching, Spotify IDs, source citations and topic categorization. The initial import contains 52 feed entries including two trailers, with 7 verified Spotify IDs and 15 verified YouTube IDs. Every entry has direct podcast audio. Missing platform IDs produce no empty or misleading embeds.

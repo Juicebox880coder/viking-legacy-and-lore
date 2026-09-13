@@ -1,33 +1,52 @@
 # Viking Legacy & Lore
 
-Stage 1A: foundation and homepage. Plain HTML/CSS served by Cloudflare Workers Static Assets. No frontend framework, application JavaScript, database, or paid CMS.
+Stages 1A and 1B: a static media site served by Cloudflare Workers Static Assets. Plain HTML/CSS, a small progressive-enhancement script, and a Python standard-library builder. No frontend framework, database, paid CMS, or runtime API.
 
-## Publishing
+Live: https://vikinglegacyandlore.com/
+Archive: https://vikinglegacyandlore.com/episodes/
 
-`main` is the production branch. Cloudflare Workers Builds watches the connected GitHub repository. Its current build command is `exit 0`, deploy command is `npx wrangler deploy`, and root is `/`. `wrangler.jsonc` declares `public/` as the asset directory. Only that directory is published.
+## Development
 
-Preview locally: `python3 -m http.server 8765 --directory public`.
+```sh
+python3 build.py
+python3 -m unittest -v test_site.py
+python3 -m http.server 8766 --directory public
+```
 
-Homepage card content lives in `homepage.json`; layout lives in `homepage.template.html`. After changing either, run `python3 build.py`, inspect the result, and commit the sources **and** generated `public/index.html`. The committed HTML works without Python or JavaScript in production. The featured episode remains in the template until Stage 1B adds the full episode model. Never deploy source changes without regenerating HTML.
+See [PUBLISHING.md](PUBLISHING.md) for importing episodes, editing content, adding sources and publishing.
 
-## Content provenance
+- `content/episodes/*.json`: stable episode records; plain-text notes, optional platform IDs and reading sources.
+- `build.py`: reusable homepage, archive and episode rendering; validation and generated-page cleanup.
+- `homepage.template.html`: existing brand, homepage structure, shared head/navigation/footer.
+- `homepage.json`: curated Start Here choices (legacy recent-card data retained for reference).
+- `public/site.css`: shared styles.
+- `public/episodes.js`: archive filtering and click-to-load platform players. Direct audio and all content work without JavaScript.
+- `.generated-pages.json`: builder-owned page manifest; prevents cleanup from touching unrelated files.
 
-Verified September 11, 2026 against the show's RSS feed at https://feeds.buzzsprout.com/2459523.rss, Spotify episode pages, and https://www.youtube.com/@VikingLegacyandLore. July 6, 2026 Hervor is the latest podcast episode in the feed. Titles retain published spelling. Homepage hooks summarize the published descriptions. `public/cover.jpg` is the existing show artwork supplied by Spotify's Hervor oEmbed response, not a newly generated image.
+## Deployment
 
-Instagram and email were confirmed by the owner. The About section uses the host name from the podcast's public profile. No fictitious episodes or articles.
+GitHub `main` triggers Cloudflare Workers Builds. Existing dashboard settings: build command `exit 0`, deploy command `npx wrangler deploy`, root `/`. Wrangler's repository configuration runs `python3 build.py` before publishing `public/`. Commit generated files too so repository review and local previews match production. No network is required during rendering.
 
-## Scope and next step
+The existing unpinned Wrangler command is retained. The production configuration introduced in Stage 1A declares static assets and custom 404 handling. DNS, custom domains, routes and permissions remain managed as before.
 
-Navigation uses homepage anchors until real supporting pages exist. All Episodes and Episode Details point to Spotify. Future topic previews are intentionally not links. Stage 1B should add an episode data model and static episode/archive templates; retain optional Spotify/YouTube URLs, image, publication date, sources and slug. Then replace the external detail links with actual published episode routes. Do not publish nonexistent routes.
+## Content provenance and scope
 
-## Audit and deployment risks
+The initial 52 episode/trailer entries were imported from https://feeds.buzzsprout.com/2459523.rss on September 13, 2026. Published titles and notes were retained as plain text, with promotional boilerplate removed. Existing short homepage hooks were reused, and one obvious missing initial letter was corrected. The newest feed entry remains Hervor, July 6, 2026. Platform IDs were checked against Spotify/YouTube oEmbed titles. Existing show artwork is reused rather than generating new images. Topic categories are editorial navigation, not evidence ratings.
 
-Initial repository: two commits, README and one public/index.html file. No package manifest, Actions workflow, Wrangler configuration, or existing CMS. Production HTML matched commit 97e530f. The active Cloudflare version had been manually deployed despite GitHub being connected. Added explicit asset configuration so the dashboard command can reproduce deployment from GitHub. No DNS, routes, permissions or domain registrations changed.
+No researched bibliographies were present in the feed. The template supports verified sources and further reading when supplied; it does not fabricate citations. Original episode notes link to their publisher. Original Tora stories have their own category. Advanced history/saga/myth distinctions belong to the later archive stage.
 
-Wrangler currently resolves through the existing unpinned `npx` command; pinning a tested CLI version can be considered separately. Runtime assets remain very small. Spotify is an external dependency and its player can fail or be blocked, so direct listening links remain available. No autoplay or custom analytics added.
+Direct audio uses the RSS enclosure with `preload="none"`. Third-party episode embeds load only on click. External providers may restrict playback by browser, region or account; direct audio, platform links and the podcast-host page offer alternatives. The pre-existing homepage show embed remains lazy-loaded.
 
-## Validation
+## Next stages
 
-Homepage inspected in Chrome at desktop, 768px, 390px and 320px; no horizontal overflow. Navigation stays visible without a JavaScript menu. Anchor targets and artwork verified. Meta description, canonical, Open Graph, Twitter card, favicon, robots and sitemap included. A branded 404 page avoids treating missing archive pages as the homepage. Built-in keyboard focus styles, skip link, semantic headings, descriptive links, iframe title and reduced-motion handling included.
+1C: dedicated About, Articles, Library, Contribute and Contact pages.
+1D: broader accessibility, performance, metadata, physical-device testing and deliberate analytics choices.
+2: articles and contributor/editorial workflow.
+3: curated Norse library, archaeology and research resources.
+4: linked sagas, Eddas, translations, people, places, maps and archive tools.
 
-Stop after Stage 1A. Full archive, episode pages and dedicated supporting pages belong to subsequent stages.
+Do not advance stages without the owner's request.
+
+## Stage 1B validation
+
+Offline tests cover generated internal links/headings, reproducible builds, invalid slugs, escaped content, and unpublishing cleanup. Browser checks covered search, topic filtering, empty results, clearing filters, mobile/tablet overflow and loading both platform embeds. Direct Hervor audio played successfully with the expected duration. All 52 publisher-page URLs responded successfully. Automated audio probes were partially rejected with HTTP 403 even though browser playback worked; do not interpret command-line audio probes as a guarantee of availability for every listener. All 22 configured platform IDs matched the expected titles through provider oEmbed metadata.
