@@ -347,3 +347,9 @@ summary { display:list-item; }
 
 .reading-article {max-width: 780px;margin-inline:auto}.reading-article header {min-height:0;padding:0;background:none}.reading-article section {margin-block:3rem}.reading-article p {line-height:1.85}.reading-article .source-list {overflow-wrap:anywhere}
 .reading-article header {display:block;text-align:left;width:auto}.reading-article header::before,.reading-article header::after {display:none}.reading-article .page-title {font-size:clamp(2.5rem,5vw,4.2rem);overflow-wrap:break-word}
+
+/* Subject links work without JavaScript and wrap at narrow widths. */
+.topic-navigation { margin:28px 0; }
+.topic-navigation h2 { font-size:1.35rem; }
+.topic-navigation ul { display:flex; flex-wrap:wrap; gap:12px 24px; padding:0; list-style:none; }
+.topic-navigation a { display:inline-block; padding:8px 0; text-underline-offset:5px; }

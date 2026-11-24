@@ -4,6 +4,7 @@ from datetime import datetime
 import html, json, re
 import research
 import audience
+import topics
 from urllib.parse import urlparse
 ROOT=Path(__file__).resolve().parent
 PUBLIC=ROOT/'public'
@@ -127,9 +128,9 @@ def build():
     generated={ 'index.html':home, **supporting_pages(template) }
     categories=sorted({e['category'] for e in episodes})
     filters='<form class="archive-filters" role="search" hidden><div><label for="episode-search">Search episodes</label><input id="episode-search" type="search" placeholder="Try Odin, longships, or Viking food"></div><div><label for="episode-topic">Topic</label><select id="episode-topic"><option value="">All topics</option>'+''.join(f'<option>{esc(c)}</option>' for c in categories)+'</select></div><button type="reset" class="button button-secondary">Clear filters</button></form>'
-    archive=f'<section><div class="eyebrow">The listening room</div><h1 class="page-title">Every story is a way in.</h1><p class="section-intro">Explore the Viking Legacy &amp; Lore episode archive: history, mythology, sagas and the lives behind the legends.</p>{filters}<p id="result-count" role="status" aria-live="polite">{len(episodes)} episodes and trailers · newest first</p><p id="no-results" hidden>No episodes match your search. Try a different word or clear the filters.</p><div class="grid archive-grid">'+''.join(card(e).replace('<h3>', '<h2>').replace('</h3>', '</h2>') for e in episodes)+'</div></section>'
+    archive=f'<section><div class="eyebrow">The listening room</div><h1 class="page-title">Viking History &amp; Norse Mythology Podcast Episodes</h1><p class="section-intro">Explore the Viking Legacy &amp; Lore episode archive: history, mythology, sagas and the lives behind the legends.</p>{topics.navigation()}{filters}<p id="result-count" role="status" aria-live="polite">{len(episodes)} episodes and trailers · newest first</p><p id="no-results" hidden>No episodes match your search. Try a different word or clear the filters.</p><div class="grid archive-grid">'+''.join(card(e).replace('<h3>', '<h2>').replace('</h3>', '</h2>') for e in episodes)+'</div></section>'
     archive_schema={'@context':'https://schema.org','@type':'CollectionPage','name':'Episode archive','url':SITE+'/episodes/','mainEntity':{'@type':'ItemList','numberOfItems':len(episodes),'itemListElement':[{'@type':'ListItem','position':i,'url':SITE+path(e),'name':e['title']} for i,e in enumerate(episodes,1)]}}
-    generated['episodes/index.html']=page_shell(template,'Episode archive','Listen to Viking Legacy & Lore: browse episodes about Viking history, Norse mythology, sagas, voyages and everyday life.','/episodes/',archive,schema=archive_schema)
+    generated['episodes/index.html']=page_shell(template,'Viking History & Norse Mythology Podcast Episodes','Listen to Viking Legacy & Lore: browse episodes about Viking history, Norse mythology, sagas, voyages and everyday life.','/episodes/',archive,schema=archive_schema)
     for e in episodes:
         notes=''.join('<p>'+esc(n)+'</p>' for n in e['notes'])
         media=f'<section id="listen" aria-labelledby="listen-heading"><h2 id="listen-heading">Listen to this episode</h2><audio controls preload="none" aria-label="{esc(e["title"])}"><source src="{esc(e["audio_url"])}" type="audio/mpeg">Your browser does not support audio playback.</audio><p class="note"><a href="{esc(e["audio_url"])}">Open the audio file</a> · <a href="{esc(e["publication_url"])}">Listen on the podcast host</a></p><div class="buttons">{platform_links(e)}</div>'
@@ -141,9 +142,13 @@ def build():
         preferred=e.get('related_ids',[])
         related=sorted((x for x in episodes if x['id']!=e['id']),key=lambda x:(preferred.index(x['id']) if x['id'] in preferred else len(preferred),0 if x['category']==e['category'] else 1))[:3]
         body=f'<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/episodes/">Episodes</a></nav><section class="episode-heading"><div class="eyebrow">{esc(e["category"])}</div><h1 class="page-title">{esc(e["title"])}</h1><p class="meta"><time datetime="{esc(e["published"])}">{date(e)}</time> · {duration(e)} · {"Trailer" if e.get("type")=="trailer" else "Podcast"}</p><p class="section-intro">{esc(e["summary"])}</p></section><div class="episode-layout"><div>{media}<section id="notes"><h2>About this episode</h2><div class="show-notes">{notes}</div></section><section class="source-note"><h2>Episode notes &amp; reading</h2><p>These are the show’s published episode notes. <a href="{esc(e["publication_url"])}">View the original episode on Buzzsprout</a>.</p>{reading}</section></div><aside class="episode-aside"><img src="{esc(e["image"])}" width="300" height="300" alt="Viking Legacy and Lore podcast artwork" loading="lazy"><p class="eyebrow">Keep exploring</p><p>Stories of the Viking world, wherever you listen.</p><a class="text-link" href="/episodes/">Browse all episodes →</a><a class="text-link" href="https://open.spotify.com/show/7ocooMGKkr9oTVeggU237S">Follow the show on Spotify ↗</a></aside></div><section><div class="emblem-divider related-ornament" aria-hidden="true"><img src="/brand/logo-gold-small.png" width="28" height="52" alt="" loading="lazy"></div><div class="eyebrow">Continue your journey</div><h2>More to explore</h2><div class="grid">'+''.join(card(x) for x in related)+'</div></section>'
+        if topics.path(e['category']):
+            body=body.replace(f'<div class="eyebrow">{esc(e["category"])}</div>',f'<div class="eyebrow"><a href="{topics.path(e["category"])}">{esc(e["category"])}</a></div>',1)
+            body=body.replace('<a class="text-link" href="/episodes/">Browse all episodes →</a>',f'<a class="text-link" href="{topics.path(e["category"])}">More {esc(topics.TOPICS[e["category"]][1])} episodes →</a><a class="text-link" href="/episodes/">Browse all episodes →</a>')
         body=body.replace('</div><aside class="episode-aside">',research.related(e['id'],research_data[0])+'</div><aside class="episode-aside">')
         schema={'@context':'https://schema.org','@type':'PodcastEpisode','name':e['title'],'url':SITE+path(e),'datePublished':e['published'],'description':e['summary'],'duration':f'PT{e["duration"]}S','image':SITE+e['image'] if e['image'].startswith('/') else e['image'],'partOfSeries':{'@id':SITE+'/#podcast'},'associatedMedia':{'@type':'AudioObject','contentUrl':e['audio_url'],'encodingFormat':'audio/mpeg'}}
         generated[path(e).lstrip('/')+'index.html']=page_shell(template,e['title'],e['summary'][:160],path(e),body,e['image'],schema)
+    generated.update(topics.generate(template,episodes,page_shell,card,path,SITE))
     generated.update(research.generate(ROOT,template,episodes,page_shell,card,path,research_data))
     generated.update(audience.generate(ROOT,template,episodes,page_shell,card,path,research_data[0]))
     for name in generated:
@@ -156,7 +161,7 @@ def build():
     previous=json.loads(manifest.read_text()) if manifest.exists() else []
     for old in set(previous)-set(generated):
         candidate=(PUBLIC/old).resolve()
-        if candidate.is_relative_to(PUBLIC.resolve()) and re.fullmatch(r'(?:articles/[a-z0-9-]+|episodes/[a-z0-9-]+|archaeology/[a-z0-9-]+|library/paths/[a-z0-9-]+|library/editorial|[a-z]+)/index\.html',old):candidate.unlink(missing_ok=True)
+        if candidate.is_relative_to(PUBLIC.resolve()) and re.fullmatch(r'(?:episodes/topics/[a-z0-9-]+|articles/[a-z0-9-]+|episodes/[a-z0-9-]+|archaeology/[a-z0-9-]+|library/paths/[a-z0-9-]+|library/editorial|[a-z]+)/index\.html',old):candidate.unlink(missing_ok=True)
     for name,content in generated.items():
         target=PUBLIC/name;target.parent.mkdir(parents=True,exist_ok=True);target.write_text(content)
     manifest.write_text(json.dumps(sorted(generated),indent=2)+'\n')

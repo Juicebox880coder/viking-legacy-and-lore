@@ -82,13 +82,30 @@ class SiteTests(unittest.TestCase):
             schemas=[json.loads(s) for s in re.findall(r'<script type="application/ld\+json">(.*?)</script>',content,re.S)]
             self.assertTrue(schemas,str(file))
             self.assertTrue(any('@graph' in s for s in schemas),str(file))
-            if '/episodes/' in canonical and not canonical.endswith('/episodes/'):
+            if '/episodes/' in canonical and '/episodes/topics/' not in canonical and not canonical.endswith('/episodes/'):
                 episode=next(s for s in schemas if s.get('@type')=='PodcastEpisode')
                 self.assertEqual(episode['url'],canonical)
                 self.assertRegex(episode['duration'],r'^PT\d+S$')
         xml=ET.parse(build.PUBLIC/'sitemap.xml')
         urls={e.text for e in xml.findall('.//{*}loc')}
         self.assertEqual(canonicals,urls)
+    def test_topic_collections_are_linked_and_match_their_episodes(self):
+        import topics
+        episodes=build.load_episodes()
+        archive=(build.PUBLIC/'episodes/index.html').read_text()
+        for category in topics.TOPICS:
+            url=topics.path(category)
+            self.assertIn('href="'+url+'"',archive)
+            content=(build.PUBLIC/url.lstrip('/')/'index.html').read_text()
+            schema=next(json.loads(s) for s in re.findall(r'<script type="application/ld\+json">(.*?)</script>',content,re.S) if json.loads(s).get('@type')=='CollectionPage')
+            expected={build.SITE+build.path(e) for e in episodes if e['category']==category}
+            self.assertEqual({x['url'] for x in schema['mainEntity']['itemListElement']},expected)
+            self.assertEqual(schema['mainEntity']['numberOfItems'],len(expected))
+            for e in episodes:
+                if e['category']==category:
+                    page=(build.PUBLIC/build.path(e).lstrip('/')/'index.html').read_text()
+                    self.assertIn('href="'+url+'"',page)
+
     def test_media_does_not_connect_until_requested(self):
         for file in build.PUBLIC.rglob('*.html'):
             content=file.read_text()

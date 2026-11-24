@@ -41,5 +41,5 @@ def generate(root,template,episodes,shell,card,episode_path,resources):
     body='<div class="eyebrow">Articles</div><h1 class="page-title">Follow the story. Find the source.</h1><p class="section-intro">Original reading guides to Viking history and Norse mythology, with visible citations and a route into the podcast.</p><div class="resource-grid">'
     for a in articles:body+=f'<article class="resource-card"><h2><a href="/articles/{a["slug"]}/">{esc(a["title"])}</a></h2><p>{esc(a["intro"])}</p><a class="text-link" href="/articles/{a["slug"]}/">Read the guide →</a></article>'
     body+='</div><div class="support-actions buttons"><a class="button button-secondary" href="/start/">Start listening</a><a class="button button-secondary" href="/library/">Explore the Norse Library</a></div>'
-    pages['articles/index.html']=wrap('Articles','Original, cited guides to Viking history and Norse mythology with related podcast episodes and reading paths.','/articles/',body)
+    pages['articles/index.html']=wrap('Viking History & Norse Mythology Articles','Original, cited guides to Viking history and Norse mythology with related podcast episodes and reading paths.','/articles/',body)
     return pages
