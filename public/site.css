@@ -357,3 +357,30 @@ summary { display:list-item; }
 /* Card titles should remain subordinate to page and section headings. */
 .learning-card h2,.learning-card h3 { font-size:1.35rem;line-height:1.3; }
 .page-title { line-height:1.15;letter-spacing:-.5px; }
+
+/* Manuscript collections: compact headings, quiet context, readable story measure. */
+.nav-links { gap:18px; }
+.editorial-filters { display:flex;gap:20px;align-items:end;padding:24px;background:#1c1b16;border:1px solid #373329;border-radius:8px;margin:32px 0; }
+.editorial-filters>div:first-child { flex:1; }
+.editorial-filters label { display:block;margin-bottom:8px;font:.85rem Arial,sans-serif; }
+.editorial-filters input,.editorial-filters select { width:100%;min-height:46px;padding:12px;background:#12110f;color:#e8e1d3;border:1px solid #9a8357;border-radius:3px;font:1rem Arial,sans-serif; }
+.editorial-filters select { min-width:180px; }
+.editorial-card { display:flex;flex-direction:column; }
+.editorial-card h2 { margin-top:14px; }
+.editorial-card .text-link { margin-top:auto;padding-top:14px; }
+.editorial-filters[hidden],.editorial-card[hidden] { display:none; }
+.manuscript-post { max-width:720px; }
+.manuscript-post header { margin-bottom:28px; }
+.post-byline { font:.82rem/1.7 Arial,sans-serif;color:#bdb5a5; }
+.story-context { border-left:2px solid #9a8357;padding:2px 0 2px 20px;margin:0 0 38px;color:#c7bfaf; }
+.story-context p { font-size:.95rem;margin:0; }
+.manuscript-prose { font-size:1.0625rem; }
+.manuscript-prose p { margin:0 0 1.3em;line-height:1.85; }
+.manuscript-post h2 { font-size:1.55rem;line-height:1.3; }
+.manuscript-post .source-note { padding-top:28px;border-top:1px solid #373329; }
+.manuscript-post .source-list p { font-size:.95rem;margin:8px 0 18px; }
+.excerpt-credit { border-block:1px solid #373329;padding:12px 0;color:#bdb5a5;font-size:.92rem; }
+.excerpt-credit summary { cursor:pointer;color:#d5bd88; }
+.post-return { margin:40px 0 60px; }
+@media(max-width:1000px) { .site-nav { flex-wrap:wrap; } .nav-links { flex-wrap:wrap;gap:4px 18px; } }
+@media(max-width:600px) { .editorial-filters { display:block;padding:18px; } .editorial-filters>div { margin-bottom:16px; } .manuscript-post .page-title { font-size:2rem; } .manuscript-prose { font-size:1rem; } .story-context { padding-left:15px;margin-bottom:30px; } }

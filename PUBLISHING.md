@@ -68,3 +68,24 @@ Google Search Console ownership uses the meta tag in homepage.template.html. Pre
 `topics.py` defines five subject collections under `/episodes/topics/`. Each selects published episodes by category and links to an existing credited library path. The episode archive links to every collection, and matching episode sidebars link back. The build includes these pages in the sitemap and adds collection and breadcrumb metadata. Edit collection introductions and path mappings in `topics.py`; retain the distinction between storytelling and sourced research. No ranking or indexing result is implied by generating these pages.
 
 November 24, 2026 validation: ten automated tests passed; JavaScript syntax and whitespace checks passed. Desktop, 390px mobile and 768px tablet previews were checked, including overflow on the archive and subject collections.
+
+## Blog and Stories
+
+Author-led excerpts live in `content/blog/*.json` and `content/stories/*.json`.
+`editorial.py` builds the two collections and individual pages, validates source
+URLs and related links, and adds reciprocal reading links to matching episodes.
+All pages enter the shared sitemap. Search and category filters are progressive
+enhancements; complete lists and post text are present in HTML without JavaScript.
+
+Keep manuscript wording, rhythm and imagery. Cut at meaningful scene boundaries;
+remove recording instructions, pronunciation cues and unfinished planning notes.
+Make only necessary flow/transcription repairs. Blog historical claims require
+credited sources and a context note. Distinguish personal interpretation from
+established evidence. Stories must label original fiction, historical invention,
+and creative myth/saga retellings; invented dialogue must never be presented as a
+translation or a documented event. Do not import third-party translations or
+images merely because they are online. Preserve the source manuscripts in Drive.
+
+`source_title` credits the manuscript without exposing private Drive URLs. The
+initial release is dated November 24, 2026; manuscript dates are not publication
+dates. Only set `episode_id` when the matching published episode is identified.

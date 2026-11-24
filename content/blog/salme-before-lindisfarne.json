@@ -1,0 +1,26 @@
+{
+  "kind": "blog",
+  "slug": "salme-before-lindisfarne",
+  "title": "Salme: Before Lindisfarne",
+  "summary": "Two ship burials in Estonia complicate the familiar story of when the Viking Age began.",
+  "category": "Archaeology",
+  "author": "T.R. Pomeroy",
+  "published": "2026-11-24",
+  "source_title": "Ep. 51 Estonia",
+  "paragraphs": [
+    "One of the most important archaeological discoveries connected to the early Viking Age: The Salme ship burials. In 2008, workers in Estonia discovered human remains near the village of Salme on the island of Saaremaa. At first, it looked small. Then the ships emerged from the earth. Two vessels. Buried centuries ago. Inside them were the remains of Scandinavian warriors who had died violently sometime around the mid-700s, before the famous raid on Lindisfarne in 793. That detail matters enormously. Because it means Viking-style expeditions into the Baltic were already happening before what we traditionally call the “start” of the Viking Age.",
+    "The graves contained swords, shields, gaming pieces, and bird remains associated with hunting. Some of the men carried injuries from brutal combat. The evidence points to a violent encounter. One theory suggests these Scandinavians arrived on Saaremaa as raiders or armed travelers and encountered fierce local resistance. The purpose of their voyage and the identity of their opponents remain uncertain.",
+    "Either way, the result was clear: These men sailed east… and never made it home. Think about how powerful that is. One of the earliest major Scandinavian ship-burial groups connected to this period was not found in Norway. Not Denmark. Not Sweden. It was found in Estonia. Buried beneath Baltic soil like a warning from history itself."
+  ],
+  "context": "The burials at Salme date to around AD 750; the two ships were found in 2008 and 2010. Trauma and grave goods give evidence of violent deaths and a Scandinavian connection. Who fought whom, and the purpose of the voyage, are not settled by the graves alone.",
+  "episode_id": null,
+  "sources": [
+    {
+      "title": "Price et al. — Isotopic provenancing of the Salme ship burials",
+      "url": "https://www.cambridge.org/core/journals/antiquity/article/isotopic-provenancing-of-the-salme-ship-burials-in-previking-age-estonia/2104723979CFABF9B89CD36851218E62",
+      "note": "Antiquity, 2016. Evidence for the burials dated around AD 750 and the origins of the men."
+    }
+  ],
+  "related": [],
+  "editorial_note": "The discovery sequence and uncertain cause of the encounter are clarified in the source note. The original manuscript’s dramatic emphasis is retained without treating a raid theory as a proven event."
+}

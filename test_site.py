@@ -66,6 +66,31 @@ class SiteTests(unittest.TestCase):
             self.assertIn('Sources &amp; further reading',content)
             self.assertIn('href="#source-',content)
             self.assertIn('href="/start/"',content)
+    def test_editorial_collections_have_context_credit_and_links(self):
+        import editorial
+        posts=editorial.load(build.ROOT,build.load_episodes())
+        for kind in ('blog','stories'):
+            self.assertGreaterEqual(len([p for p in posts if p['kind']==kind]),10)
+        for p in posts:
+            text=(build.PUBLIC/editorial.url(p).lstrip('/')/'index.html').read_text()
+            self.assertIn('About this excerpt',text)
+            self.assertNotIn('docs.google.com',text)
+            self.assertIn('By T.R. Pomeroy',text)
+            if p['kind']=='blog':self.assertIn('Historical context &amp; sources',text)
+            else:self.assertIn('aria-label="About this story"',text)
+            if p.get('episode_id'):
+                e=next(e for e in build.load_episodes() if e['id']==p['episode_id'])
+                self.assertIn(build.path(e),text)
+                self.assertIn(editorial.url(p),(build.PUBLIC/build.path(e).lstrip('/')/'index.html').read_text())
+
+    def test_editorial_rejects_broken_references(self):
+        import editorial
+        with tempfile.TemporaryDirectory() as folder:
+            root=Path(folder);shutil.copytree(build.ROOT/'content',root/'content')
+            p=next((root/'content/blog').glob('*.json'));data=json.loads(p.read_text())
+            data['sources'][0]['url']='javascript:alert(1)';p.write_text(json.dumps(data))
+            with self.assertRaisesRegex(ValueError,'HTTPS'):editorial.load(root,build.load_episodes())
+
     def test_plain_text_is_escaped(self):
         e=build.load_episodes()[0].copy();e['title']='<script>alert(1)</script>'
         self.assertNotIn('<script>',build.card(e));self.assertIn('&lt;script&gt;',build.card(e))
