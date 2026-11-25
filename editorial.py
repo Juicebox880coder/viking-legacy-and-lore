@@ -26,6 +26,7 @@ def load(root,episodes):
     if len(paths)!=len(posts):raise ValueError('Duplicate editorial path')
     for p in posts:
         if any(x not in paths for x in p['related']):raise ValueError('Unknown related post')
+    posts.sort(key=lambda p: p['published'], reverse=True)
     return posts
 
 def card(p):
